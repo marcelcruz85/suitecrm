@@ -503,3 +503,14 @@ footer{
     bottom: 0px !important;
     background: #edecec;
 }
+@media(min-width:768px){
+    .desktop-bar{
+        padding: 0px !important;
+    }
+    .navbar-inverse #desktop_notification{
+        top: 1px !important;
+    }
+    .navbar-inverse .user-menu-button{
+        margin: 0px 10px -2px !important;
+    }
+}
