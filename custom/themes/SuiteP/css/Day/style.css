@@ -1,5 +1,5 @@
 .navbar-inverse {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     background: #2196f3
 }
 
@@ -28,22 +28,16 @@
 
 .navbar-inverse .dropdown-menu{
     border-radius: 0px;
-    height: 0 !important;
     width: 250px;
-    padding: 0px;
     overflow: visible;
-}
-.navbar-inverse .dropdown-menu > li{
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-
-.navbar-inverse .dropdown-menu ul {
-    background: #fff
+    padding: 0px;
+    border: none;
 }
 
-.navbar-inverse .dropdown-menu ul a {
-    background: none !important
+.navbar-inverse .dropdown-menu > li {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
+
 
 .navbar-inverse .recent-links-title {
     border-bottom: 1px solid #c3c3c3;
@@ -125,8 +119,8 @@ body #content {
     background: #edecec
 }
 
-.listViewBody {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+.list-view-rounded-corners table {
+    box-shadow: 1px 1px 5px #cecece
 }
 
 table #selectLinkTop li label {
@@ -163,10 +157,10 @@ table thead #pagination td #listViewNextButton_top {
 }
 
 table thead #pagination td ul .sugar_action_button {
-    background: #13b9ce !important;
+    background: #00bcd4 !important;
     height: 30px !important;
     vertical-align: center !important;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 1px 1px 2px #cecece;
     border-radius: 0px !important;
     padding: 3px !important
 }
@@ -188,17 +182,14 @@ table tfoot tbody tr td:first-child {
     display: none
 }
 
-.suitepicon{
-    line-height: auto !important;
-}
-table tfoot table tbody tr td button{
-    padding: 1px 5px !important;
-    border-radius: 0px !important;
-    background: none !important;
-}
-
-table tfoot table tbody tr td button span{
-    color: #000 !important;
+table tfoot table tbody tr td button {
+    background: #00bcd4 !important;
+    height: 35px !important;
+    width: 35px !important;
+    box-shadow: 1px 1px 2px #cecece;
+    border-radius: 50px !important;
+    padding: 5px !important;
+    color: #fff !important
 }
 
 table tfoot table tbody tr td .pageNumbers {
@@ -208,7 +199,7 @@ table tfoot table tbody tr td .pageNumbers {
 .subnav {
     padding: 0px !important;
     border-radius: 0px !important;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    box-shadow: 2px 4px 3px #cecece;
     top: 30px !important;
     border: none !important;
     background: #fff !important
@@ -234,9 +225,9 @@ table tfoot table tbody tr td .pageNumbers {
     border: none !important
 }
 
-/* .tab-content {
+.tab-content {
     box-shadow: 0px 2px 5px #c3c3c3
-} */
+}
 
 .detail-view {
     margin-top: -32px !important
@@ -550,27 +541,6 @@ footer {
     position: fixed;
     bottom: 0px !important;
     background: #edecec
-}
-
-.sidebar{
-    background: #fff;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-
-.sidebar li{
-    background: #fff !important;
-    color: #000 !important;
-    opacity: 0.8
-}
-
-.sidebar li a{
-    background: #fff !important;
-    color: #000 !important;
-    opacity: 0.8
-}
-
-.panel-content .panel{
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 @media(min-width:768px) {
