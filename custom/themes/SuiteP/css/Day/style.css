@@ -1,3 +1,14 @@
+
+
+body {
+    background: #edecec;
+    font-family: roboto;
+}
+
+body #content {
+    background: #edecec
+}
+
 .navbar-inverse {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     background: #2196f3
@@ -34,8 +45,9 @@
     border: none;
 }
 
-.navbar-inverse .dropdown-menu > li {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+.navbar-inverse .dropdown-menu>li {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    background:#fff;
 }
 
 
@@ -82,25 +94,11 @@
     background: #1d84d5
 }
 
-.navbar-inverse #desktop_notifications {
-    top: -3px !important
-}
-
-.navbar-inverse #desktop_notifications button {
-    background: none
-}
-
+#globalLinks,
+.navbar-inverse .user-menu-button:hover,
 .navbar-inverse #desktop_notifications button:hover {
-    background: none
-}
-
-.navbar-inverse .user-menu-button {
-    background: none !important;
-    margin: -3px 3px 3px !important
-}
-
-.navbar-inverse .user-menu-button:hover {
-    background: none
+    background: #2196f3 !important;
+    text-shadow: none;
 }
 
 .navbar-inverse .user-menu-button span {
@@ -108,19 +106,32 @@
 }
 
 .navbar-inverse .user-menu-button span:first-child {
-    display: block
+    display: block;
 }
 
-body {
-    background: #edecec
+.user-dropdown{
+    margin-top: 10px !important;
 }
 
-body #content {
-    background: #edecec
+.sidebar{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background: #fff;
+    padding-top: 20px
+}
+.sidebar h2,
+.sidebar a{
+    color: #000 !important;
+    opacity: 0.8;
+    font-weight: 700;
+    font-size: 16px
+}
+.actionMenuSidebar{
+    display: none;
 }
 
-.list-view-rounded-corners table {
-    box-shadow: 1px 1px 5px #cecece
+
+.listViewBody {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 table #selectLinkTop li label {
@@ -226,7 +237,7 @@ table tfoot table tbody tr td .pageNumbers {
 }
 
 .tab-content {
-    box-shadow: 0px 2px 5px #c3c3c3
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .detail-view {
