@@ -234,9 +234,9 @@ table tfoot table tbody tr td .pageNumbers {
     border: none !important
 }
 
-.tab-content {
+/* .tab-content {
     box-shadow: 0px 2px 5px #c3c3c3
-}
+} */
 
 .detail-view {
     margin-top: -32px !important
@@ -569,6 +569,9 @@ footer {
     opacity: 0.8
 }
 
+.panel-content .panel{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
 
 @media(min-width:768px) {
     .desktop-bar {
