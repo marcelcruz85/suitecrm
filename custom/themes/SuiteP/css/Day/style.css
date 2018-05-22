@@ -87,11 +87,19 @@ body #content {
 
 .navbar-inverse li.navbar-search .input-group button:hover {
     background: none;
-    color: #1d84d5
+    color: #1d84d5 
 }
 
 .navbar-inverse #searchbutton:hover {
     background: #1d84d5
+}
+
+.navbar-inverse .user-menu-button,
+.navbar-inverse #desktop_notifications button{
+    background: #2196f3 !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    font-size: 37px;
+    line-height: 1px !important;
 }
 
 #globalLinks,
@@ -193,15 +201,20 @@ table tfoot tbody tr td:first-child {
     display: none
 }
 
-table tfoot table tbody tr td button {
-    background: #00bcd4 !important;
-    height: 35px !important;
-    width: 35px !important;
-    box-shadow: 1px 1px 2px #cecece;
-    border-radius: 50px !important;
-    padding: 5px !important;
-    color: #fff !important
+table tfoot table tbody tr td button{
+    color: #000 !important;
+    line-height: 0px !important;
+    background: none !important;
+    margin: 0px !important;
+    padding: 0px !important;
 }
+
+table tfoot table tbody tr td button span{
+    color: #000 !important;
+    padding: 5px !important;
+    margin: 0px !important;
+}
+
 
 table tfoot table tbody tr td .pageNumbers {
     color: #000 !important
@@ -546,6 +559,28 @@ select {
     text-shadow: none !important;
     font-family: roboto !important;
     font-size: 13px !important
+}
+
+.buttontoggle{
+    background: none;
+    color: #2196f3 !important;
+    font-size: 22px;
+
+}
+.sidebar{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background: #fff;
+    padding-top: 20px
+}
+.sidebar h2,
+.sidebar a{
+    color: #000 !important;
+    opacity: 0.8;
+    font-weight: 700;
+    font-size: 16px
+}
+.actionMenuSidebar{
+    display: none;
 }
 
 footer {
