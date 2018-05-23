@@ -1,5 +1,5 @@
 <?php
-// created: 2018-05-20 19:40:39
+// created: 2018-05-22 22:00:01
 $mod_strings = array (
   'LBL_ID' => 'ID',
   'LBL_DATE_ENTERED' => 'Date Created',
@@ -130,4 +130,5 @@ $mod_strings = array (
   'LBL_LIST_STATUS' => 'Status',
   'LBL_LIST_DATE_MODIFIED' => 'Date Modified',
   'LBL_LIST_DUE_DATE' => 'Due Date',
+  'LBL_EDITVIEW_PANEL1' => 'Other',
 );

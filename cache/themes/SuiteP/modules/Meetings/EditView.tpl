@@ -72,29 +72,43 @@
 <div id="EditView_tabs">
 
 <ul class="nav nav-tabs">
+
+
+<li role="presentation" class="active">
+<a id="tab0" data-toggle="tab" class="hidden-xs">
+{sugar_translate label='LBL_MEETING_INFORMATION' module='Meetings'}
+</a>
+
+
+<!-- Counting Tabs 1-->
+<a id="xstab0" href="#" class="visible-xs first-tab-xs dropdown-toggle" data-toggle="dropdown">
+{sugar_translate label='LBL_MEETING_INFORMATION' module='Meetings'}
+</a>
+<ul id="first-tab-menu-xs" class="dropdown-menu">
+<li role="presentation">
+<a id="tab0" data-toggle="tab" onclick="changeFirstTab(this, 'tab-content-0');">
+{sugar_translate label='LBL_MEETING_INFORMATION' module='Meetings'}
+</a>
+</li>
+<li role="presentation">
+<a id="tab1" data-toggle="tab" onclick="changeFirstTab(this, 'tab-content-1');">
+{sugar_translate label='LBL_PANEL_ASSIGNMENT' module='Meetings'}
+</a>
+</li>
+</ul>
+</li>
+
+
+<li role="presentation" class="hidden-xs">
+<a id="tab1"  data-toggle="tab">
+{sugar_translate label='LBL_PANEL_ASSIGNMENT' module='Meetings'}
+</a>
+</li>
 </ul>
 <div class="clearfix"></div>
-<div class="tab-content" style="padding: 0; border: 0;">
-
-<div class="tab-pane panel-collapse">&nbsp;</div>
-</div>
-
-<div class="panel-content">
-<div>&nbsp;</div>
-
-
-
-
-<div class="panel panel-default">
-<div class="panel-heading ">
-<a class="" role="button" data-toggle="collapse-edit" aria-expanded="false">
-<div class="col-xs-10 col-sm-11 col-md-11">
-{sugar_translate label='LBL_MEETING_INFORMATION' module='Meetings'}
-</div>
-</a>
-</div>
-<div class="panel-body panel-collapse collapse in panelContainer" id="detailpanel_-1" data-id="LBL_MEETING_INFORMATION">
 <div class="tab-content">
+
+<div class="tab-pane-NOBOOTSTRAPTOGGLER active fade in" id='tab-content-0'>
 <!-- tab_panel_content.tpl -->
 <div class="row edit-view-row">
 
@@ -407,264 +421,7 @@ onclick="SUGAR.clearRelateField(this.form, '{$fields.status.name}-input', '{$fie
 <div class="col-xs-12 col-sm-6 edit-view-row-item">
 
 
-<div class="col-xs-12 col-sm-4 label" data-label="LBL_DATE">
-
-{minify}
-{capture name="label" assign="label"}{sugar_translate label='LBL_DATE' module='Meetings'}{/capture}
-{$label|strip_semicolon}:
-
-<span class="required">*</span>
-{/minify}
-</div>
-
-<div class="col-xs-12 col-sm-8 edit-view-field " type="datetimecombo" field="date_start"  >
-{counter name="panelFieldCount" print=false}
-
-<table border="0" cellpadding="0" cellspacing="0" class="dateTime">
-<tr valign="middle">
-<td nowrap class="dateTimeComboColumn">
-<input autocomplete="off" type="text" id="{$fields.date_start.name}_date" class="datetimecombo_date" value="{$fields[$fields.date_start.name].value}" size="11" maxlength="10" title='' tabindex="0" onblur="combo_{$fields.date_start.name}.update();" onchange="combo_{$fields.date_start.name}.update(); SugarWidgetScheduler.update_time();"    >
-<button type="button" id="{$fields.date_start.name}_trigger" class="btn btn-danger" onclick="return false;"><span class="suitepicon suitepicon-module-calendar"  alt="{$APP.LBL_ENTER_DATE}"></span></button>
-</td>
-<td nowrap class="dateTimeComboColumn">
-<div id="{$fields.date_start.name}_time_section" class="datetimecombo_time_section"></div>
-</td>
-</tr>
-</table>
-<input type="hidden" class="DateTimeCombo" id="{$fields.date_start.name}" name="{$fields.date_start.name}" value="{$fields[$fields.date_start.name].value}">
-<script type="text/javascript" src="{sugar_getjspath file="include/SugarFields/Fields/Datetimecombo/Datetimecombo.js"}"></script>
-<script type="text/javascript">
-var combo_{$fields.date_start.name} = new Datetimecombo("{$fields[$fields.date_start.name].value}", "{$fields.date_start.name}", "{$TIME_FORMAT}", "0", '', false, true);
-//Render the remaining widget fields
-text = combo_{$fields.date_start.name}.html('SugarWidgetScheduler.update_time();');
-document.getElementById('{$fields.date_start.name}_time_section').innerHTML = text;
-
-//Call eval on the update function to handle updates to calendar picker object
-eval(combo_{$fields.date_start.name}.jsscript('SugarWidgetScheduler.update_time();'));
-
-addToValidateBinaryDependency('{$form_name}',"{$fields.date_start.name}_hours", 'alpha', false, "{$APP.ERR_MISSING_REQUIRED_FIELDS} {$APP.LBL_HOURS}" ,"{$fields.date_start.name}_date");
-addToValidateBinaryDependency('{$form_name}', "{$fields.date_start.name}_minutes", 'alpha', false, "{$APP.ERR_MISSING_REQUIRED_FIELDS} {$APP.LBL_MINUTES}" ,"{$fields.date_start.name}_date");
-addToValidateBinaryDependency('{$form_name}', "{$fields.date_start.name}_meridiem", 'alpha', false, "{$APP.ERR_MISSING_REQUIRED_FIELDS} {$APP.LBL_MERIDIEM}","{$fields.date_start.name}_date");
-
-YAHOO.util.Event.onDOMReady(function()
-{ldelim}
-
-	Calendar.setup ({ldelim}
-	onClose : update_{$fields.date_start.name},
-	inputField : "{$fields.date_start.name}_date",
-    form : "EditView",
-	ifFormat : "{$CALENDAR_FORMAT}",
-	daFormat : "{$CALENDAR_FORMAT}",
-	button : "{$fields.date_start.name}_trigger",
-	singleClick : true,
-	step : 1,
-	weekNumbers: false,
-        startWeekday: {$CALENDAR_FDOW|default:'0'},
-	comboObject: combo_{$fields.date_start.name}
-	{rdelim});
-
-	//Call update for first time to round hours and minute values
-	combo_{$fields.date_start.name}.update(false);
-
-{rdelim}); 
-</script>
-</div>
-
-<!-- [/hide] -->
-</div>
-
-
-<div class="col-xs-12 col-sm-6 edit-view-row-item">
-
-
-<div class="col-xs-12 col-sm-4 label" data-label="LBL_LIST_RELATED_TO">
-
-{minify}
-{capture name="label" assign="label"}{sugar_translate label='LBL_LIST_RELATED_TO' module='Meetings'}{/capture}
-{$label|strip_semicolon}:
-
-{/minify}
-</div>
-
-<div class="col-xs-12 col-sm-8 edit-view-field " type="parent" field="parent_name"  >
-{counter name="panelFieldCount" print=false}
-
-<select name='parent_type' tabindex="0" id='parent_type' title=''  onchange='document.{$form_name}.{$fields.parent_name.name}.value="";document.{$form_name}.parent_id.value=""; changeParentQS("{$fields.parent_name.name}"); checkParentType(document.{$form_name}.parent_type.value, document.{$form_name}.btn_{$fields.parent_name.name});'>
-{html_options options=$fields.parent_name.options selected=$fields.parent_type.value sortoptions=true}
-</select>
-{if empty($fields.parent_name.options[$fields.parent_type.value])}
-{assign var="keepParent" value = 0}
-{else}
-{assign var="keepParent" value = 1}
-{/if}
-<input type="text" name="{$fields.parent_name.name}" id="{$fields.parent_name.name}" class="sqsEnabled" tabindex="0"
-size="" {if $keepParent}value="{$fields.parent_name.value}"{/if} autocomplete="off"><input type="hidden" name="{$fields.parent_id.name}" id="{$fields.parent_id.name}"  
-{if $keepParent}value="{$fields.parent_id.value}"{/if}>
-<span class="id-ff multiple">
-<button type="button" name="btn_{$fields.parent_name.name}" id="btn_{$fields.parent_name.name}" tabindex="0"	
-title="{sugar_translate label="LBL_SELECT_BUTTON_TITLE"}" class="button firstChild" value="{sugar_translate label="LBL_SELECT_BUTTON_LABEL"}"
-onclick='open_popup(document.{$form_name}.parent_type.value, 600, 400, "", true, false, {literal}{"call_back_function":"set_return","form_name":"EditView","field_to_name_array":{"id":"parent_id","name":"parent_name"}}{/literal}, "single", true);' ><span class="suitepicon suitepicon-action-select"></span></button><button type="button" name="btn_clr_{$fields.parent_name.name}" id="btn_clr_{$fields.parent_name.name}" tabindex="0" title="{sugar_translate label=""}" class="button lastChild" onclick="this.form.{$fields.parent_name.name}.value = ''; this.form.{$fields.parent_id.name}.value = '';" value="{sugar_translate label=""}" ><span class="suitepicon suitepicon-action-clear"></span></button>
-</span>
-{literal}
-<script type="text/javascript">
-if (typeof(changeParentQS) == 'undefined'){
-function changeParentQS(field) {
-    if(typeof sqs_objects == 'undefined') {
-       return;
-    }
-	field = YAHOO.util.Dom.get(field);
-    var form = field.form;
-    var sqsId = form.id + "_" + field.id;
-    var typeField =  form.elements.parent_type;
-    var new_module = typeField.value;
-    //Update the SQS globals to reflect the new module choice
-    if (typeof(QSFieldsArray[sqsId]) != 'undefined')
-    {
-        QSFieldsArray[sqsId].sqs.modules = new Array(new_module);
-    }
-	if(typeof QSProcessedFieldsArray != 'undefined')
-    {
-	   QSProcessedFieldsArray[sqsId] = false;
-    }
-    if(sqs_objects[sqsId] == undefined){
-    	return;
-    }
-    sqs_objects[sqsId]["modules"] = new Array(new_module);
-    if(typeof(disabledModules) != 'undefined' && typeof(disabledModules[new_module]) != 'undefined') {
-		sqs_objects[sqsId]["disable"] = true;
-		field.readOnly = true;
-	} else {
-		sqs_objects[sqsId]["disable"] = false;
-		field.readOnly = false;
-    }
-    enableQS(false);
-}}
-</script>
-<script>var disabledModules=[];</script>
-<script language="javascript">if(typeof sqs_objects == 'undefined'){var sqs_objects = new Array;}sqs_objects['EditView_parent_name']={"form":"EditView","method":"query","modules":["{/literal}{if !empty($fields.parent_type.value)}{$fields.parent_type.value}{else}Accounts{/if}{literal}"],"group":"or","field_list":["name","id"],"populate_list":["parent_name","parent_id"],"required_list":["parent_id"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"order":"name","limit":"30","no_match_text":"No Match"};</script>
-<script>
-//change this in case it wasn't the default on editing existing items.
-$(document).ready(function(){
-	changeParentQS("parent_name")
-});
-</script>
-{/literal}
-</div>
-
-<!-- [/hide] -->
-</div>
-<div class="clear"></div>
-<div class="clear"></div>
-
-
-
-<div class="col-xs-12 col-sm-6 edit-view-row-item">
-
-
-<div class="col-xs-12 col-sm-4 label" data-label="LBL_DATE_END">
-
-{minify}
-{capture name="label" assign="label"}{sugar_translate label='LBL_DATE_END' module='Meetings'}{/capture}
-{$label|strip_semicolon}:
-
-<span class="required">*</span>
-{/minify}
-</div>
-
-<div class="col-xs-12 col-sm-8 edit-view-field " type="datetimecombo" field="date_end"  >
-{counter name="panelFieldCount" print=false}
-
-<table border="0" cellpadding="0" cellspacing="0" class="dateTime">
-<tr valign="middle">
-<td nowrap class="dateTimeComboColumn">
-<input autocomplete="off" type="text" id="{$fields.date_end.name}_date" class="datetimecombo_date" value="{$fields[$fields.date_end.name].value}" size="11" maxlength="10" title='' tabindex="0" onblur="combo_{$fields.date_end.name}.update();" onchange="combo_{$fields.date_end.name}.update(); SugarWidgetScheduler.update_time();"    >
-<button type="button" id="{$fields.date_end.name}_trigger" class="btn btn-danger" onclick="return false;"><span class="suitepicon suitepicon-module-calendar"  alt="{$APP.LBL_ENTER_DATE}"></span></button>
-</td>
-<td nowrap class="dateTimeComboColumn">
-<div id="{$fields.date_end.name}_time_section" class="datetimecombo_time_section"></div>
-</td>
-</tr>
-</table>
-<input type="hidden" class="DateTimeCombo" id="{$fields.date_end.name}" name="{$fields.date_end.name}" value="{$fields[$fields.date_end.name].value}">
-<script type="text/javascript" src="{sugar_getjspath file="include/SugarFields/Fields/Datetimecombo/Datetimecombo.js"}"></script>
-<script type="text/javascript">
-var combo_{$fields.date_end.name} = new Datetimecombo("{$fields[$fields.date_end.name].value}", "{$fields.date_end.name}", "{$TIME_FORMAT}", "0", '', false, true);
-//Render the remaining widget fields
-text = combo_{$fields.date_end.name}.html('SugarWidgetScheduler.update_time();');
-document.getElementById('{$fields.date_end.name}_time_section').innerHTML = text;
-
-//Call eval on the update function to handle updates to calendar picker object
-eval(combo_{$fields.date_end.name}.jsscript('SugarWidgetScheduler.update_time();'));
-
-addToValidateBinaryDependency('{$form_name}',"{$fields.date_end.name}_hours", 'alpha', false, "{$APP.ERR_MISSING_REQUIRED_FIELDS} {$APP.LBL_HOURS}" ,"{$fields.date_end.name}_date");
-addToValidateBinaryDependency('{$form_name}', "{$fields.date_end.name}_minutes", 'alpha', false, "{$APP.ERR_MISSING_REQUIRED_FIELDS} {$APP.LBL_MINUTES}" ,"{$fields.date_end.name}_date");
-addToValidateBinaryDependency('{$form_name}', "{$fields.date_end.name}_meridiem", 'alpha', false, "{$APP.ERR_MISSING_REQUIRED_FIELDS} {$APP.LBL_MERIDIEM}","{$fields.date_end.name}_date");
-
-YAHOO.util.Event.onDOMReady(function()
-{ldelim}
-
-	Calendar.setup ({ldelim}
-	onClose : update_{$fields.date_end.name},
-	inputField : "{$fields.date_end.name}_date",
-    form : "EditView",
-	ifFormat : "{$CALENDAR_FORMAT}",
-	daFormat : "{$CALENDAR_FORMAT}",
-	button : "{$fields.date_end.name}_trigger",
-	singleClick : true,
-	step : 1,
-	weekNumbers: false,
-        startWeekday: {$CALENDAR_FDOW|default:'0'},
-	comboObject: combo_{$fields.date_end.name}
-	{rdelim});
-
-	//Call update for first time to round hours and minute values
-	combo_{$fields.date_end.name}.update(false);
-
-{rdelim}); 
-</script>
-</div>
-
-<!-- [/hide] -->
-</div>
-
-
-<div class="col-xs-12 col-sm-6 edit-view-row-item">
-
-
-<div class="col-xs-12 col-sm-4 label" data-label="LBL_LOCATION">
-
-{minify}
-{capture name="label" assign="label"}{sugar_translate label='LBL_LOCATION' module='Meetings'}{/capture}
-{$label|strip_semicolon}:
-
-{/minify}
-</div>
-
-<div class="col-xs-12 col-sm-8 edit-view-field " type="varchar" field="location"  >
-{counter name="panelFieldCount" print=false}
-
-{if strlen($fields.location.value) <= 0}
-{assign var="value" value=$fields.location.default_value }
-{else}
-{assign var="value" value=$fields.location.value }
-{/if}  
-<input type='text' name='{$fields.location.name}' 
-id='{$fields.location.name}' size='30' 
-maxlength='50' 
-value='{$value}' title=''      >
-</div>
-
-<!-- [/hide] -->
-</div>
-<div class="clear"></div>
-<div class="clear"></div>
-
-
-
-<div class="col-xs-12 col-sm-12 edit-view-row-item">
-
-
-<div class="col-xs-12 col-sm-2 label" data-label="LBL_DURATION">
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_DURATION">
 
 {minify}
 {capture name="label" assign="label"}{sugar_translate label='LBL_DURATION' module='Meetings'}{/capture}
@@ -673,7 +430,7 @@ value='{$value}' title=''      >
 {/minify}
 </div>
 
-<div class="col-xs-12 col-sm-8 edit-view-field " type="enum" field="duration" colspan='3' >
+<div class="col-xs-12 col-sm-8 edit-view-field " type="enum" field="duration"  >
 {counter name="panelFieldCount"  print=false}
 
 {if !isset($config.enable_autocomplete) || $config.enable_autocomplete==false}
@@ -941,6 +698,180 @@ onclick="SUGAR.clearRelateField(this.form, '{$fields.duration.name}-input', '{$f
 
 <!-- [/hide] -->
 </div>
+
+
+<div class="col-xs-12 col-sm-6 edit-view-row-item">
+
+
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_LOCATION">
+
+{minify}
+{capture name="label" assign="label"}{sugar_translate label='LBL_LOCATION' module='Meetings'}{/capture}
+{$label|strip_semicolon}:
+
+{/minify}
+</div>
+
+<div class="col-xs-12 col-sm-8 edit-view-field " type="varchar" field="location"  >
+{counter name="panelFieldCount" print=false}
+
+{if strlen($fields.location.value) <= 0}
+{assign var="value" value=$fields.location.default_value }
+{else}
+{assign var="value" value=$fields.location.value }
+{/if}  
+<input type='text' name='{$fields.location.name}' 
+id='{$fields.location.name}' size='30' 
+maxlength='50' 
+value='{$value}' title=''      >
+</div>
+
+<!-- [/hide] -->
+</div>
+<div class="clear"></div>
+<div class="clear"></div>
+
+
+
+<div class="col-xs-12 col-sm-6 edit-view-row-item">
+
+
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_DATE">
+
+{minify}
+{capture name="label" assign="label"}{sugar_translate label='LBL_DATE' module='Meetings'}{/capture}
+{$label|strip_semicolon}:
+
+<span class="required">*</span>
+{/minify}
+</div>
+
+<div class="col-xs-12 col-sm-8 edit-view-field " type="datetimecombo" field="date_start"  >
+{counter name="panelFieldCount" print=false}
+
+<table border="0" cellpadding="0" cellspacing="0" class="dateTime">
+<tr valign="middle">
+<td nowrap class="dateTimeComboColumn">
+<input autocomplete="off" type="text" id="{$fields.date_start.name}_date" class="datetimecombo_date" value="{$fields[$fields.date_start.name].value}" size="11" maxlength="10" title='' tabindex="0" onblur="combo_{$fields.date_start.name}.update();" onchange="combo_{$fields.date_start.name}.update(); SugarWidgetScheduler.update_time();"    >
+<button type="button" id="{$fields.date_start.name}_trigger" class="btn btn-danger" onclick="return false;"><span class="suitepicon suitepicon-module-calendar"  alt="{$APP.LBL_ENTER_DATE}"></span></button>
+</td>
+<td nowrap class="dateTimeComboColumn">
+<div id="{$fields.date_start.name}_time_section" class="datetimecombo_time_section"></div>
+</td>
+</tr>
+</table>
+<input type="hidden" class="DateTimeCombo" id="{$fields.date_start.name}" name="{$fields.date_start.name}" value="{$fields[$fields.date_start.name].value}">
+<script type="text/javascript" src="{sugar_getjspath file="include/SugarFields/Fields/Datetimecombo/Datetimecombo.js"}"></script>
+<script type="text/javascript">
+var combo_{$fields.date_start.name} = new Datetimecombo("{$fields[$fields.date_start.name].value}", "{$fields.date_start.name}", "{$TIME_FORMAT}", "0", '', false, true);
+//Render the remaining widget fields
+text = combo_{$fields.date_start.name}.html('SugarWidgetScheduler.update_time();');
+document.getElementById('{$fields.date_start.name}_time_section').innerHTML = text;
+
+//Call eval on the update function to handle updates to calendar picker object
+eval(combo_{$fields.date_start.name}.jsscript('SugarWidgetScheduler.update_time();'));
+
+addToValidateBinaryDependency('{$form_name}',"{$fields.date_start.name}_hours", 'alpha', false, "{$APP.ERR_MISSING_REQUIRED_FIELDS} {$APP.LBL_HOURS}" ,"{$fields.date_start.name}_date");
+addToValidateBinaryDependency('{$form_name}', "{$fields.date_start.name}_minutes", 'alpha', false, "{$APP.ERR_MISSING_REQUIRED_FIELDS} {$APP.LBL_MINUTES}" ,"{$fields.date_start.name}_date");
+addToValidateBinaryDependency('{$form_name}', "{$fields.date_start.name}_meridiem", 'alpha', false, "{$APP.ERR_MISSING_REQUIRED_FIELDS} {$APP.LBL_MERIDIEM}","{$fields.date_start.name}_date");
+
+YAHOO.util.Event.onDOMReady(function()
+{ldelim}
+
+	Calendar.setup ({ldelim}
+	onClose : update_{$fields.date_start.name},
+	inputField : "{$fields.date_start.name}_date",
+    form : "EditView",
+	ifFormat : "{$CALENDAR_FORMAT}",
+	daFormat : "{$CALENDAR_FORMAT}",
+	button : "{$fields.date_start.name}_trigger",
+	singleClick : true,
+	step : 1,
+	weekNumbers: false,
+        startWeekday: {$CALENDAR_FDOW|default:'0'},
+	comboObject: combo_{$fields.date_start.name}
+	{rdelim});
+
+	//Call update for first time to round hours and minute values
+	combo_{$fields.date_start.name}.update(false);
+
+{rdelim}); 
+</script>
+</div>
+
+<!-- [/hide] -->
+</div>
+
+
+<div class="col-xs-12 col-sm-6 edit-view-row-item">
+
+
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_DATE_END">
+
+{minify}
+{capture name="label" assign="label"}{sugar_translate label='LBL_DATE_END' module='Meetings'}{/capture}
+{$label|strip_semicolon}:
+
+<span class="required">*</span>
+{/minify}
+</div>
+
+<div class="col-xs-12 col-sm-8 edit-view-field " type="datetimecombo" field="date_end"  >
+{counter name="panelFieldCount" print=false}
+
+<table border="0" cellpadding="0" cellspacing="0" class="dateTime">
+<tr valign="middle">
+<td nowrap class="dateTimeComboColumn">
+<input autocomplete="off" type="text" id="{$fields.date_end.name}_date" class="datetimecombo_date" value="{$fields[$fields.date_end.name].value}" size="11" maxlength="10" title='' tabindex="0" onblur="combo_{$fields.date_end.name}.update();" onchange="combo_{$fields.date_end.name}.update(); SugarWidgetScheduler.update_time();"    >
+<button type="button" id="{$fields.date_end.name}_trigger" class="btn btn-danger" onclick="return false;"><span class="suitepicon suitepicon-module-calendar"  alt="{$APP.LBL_ENTER_DATE}"></span></button>
+</td>
+<td nowrap class="dateTimeComboColumn">
+<div id="{$fields.date_end.name}_time_section" class="datetimecombo_time_section"></div>
+</td>
+</tr>
+</table>
+<input type="hidden" class="DateTimeCombo" id="{$fields.date_end.name}" name="{$fields.date_end.name}" value="{$fields[$fields.date_end.name].value}">
+<script type="text/javascript" src="{sugar_getjspath file="include/SugarFields/Fields/Datetimecombo/Datetimecombo.js"}"></script>
+<script type="text/javascript">
+var combo_{$fields.date_end.name} = new Datetimecombo("{$fields[$fields.date_end.name].value}", "{$fields.date_end.name}", "{$TIME_FORMAT}", "0", '', false, true);
+//Render the remaining widget fields
+text = combo_{$fields.date_end.name}.html('SugarWidgetScheduler.update_time();');
+document.getElementById('{$fields.date_end.name}_time_section').innerHTML = text;
+
+//Call eval on the update function to handle updates to calendar picker object
+eval(combo_{$fields.date_end.name}.jsscript('SugarWidgetScheduler.update_time();'));
+
+addToValidateBinaryDependency('{$form_name}',"{$fields.date_end.name}_hours", 'alpha', false, "{$APP.ERR_MISSING_REQUIRED_FIELDS} {$APP.LBL_HOURS}" ,"{$fields.date_end.name}_date");
+addToValidateBinaryDependency('{$form_name}', "{$fields.date_end.name}_minutes", 'alpha', false, "{$APP.ERR_MISSING_REQUIRED_FIELDS} {$APP.LBL_MINUTES}" ,"{$fields.date_end.name}_date");
+addToValidateBinaryDependency('{$form_name}', "{$fields.date_end.name}_meridiem", 'alpha', false, "{$APP.ERR_MISSING_REQUIRED_FIELDS} {$APP.LBL_MERIDIEM}","{$fields.date_end.name}_date");
+
+YAHOO.util.Event.onDOMReady(function()
+{ldelim}
+
+	Calendar.setup ({ldelim}
+	onClose : update_{$fields.date_end.name},
+	inputField : "{$fields.date_end.name}_date",
+    form : "EditView",
+	ifFormat : "{$CALENDAR_FORMAT}",
+	daFormat : "{$CALENDAR_FORMAT}",
+	button : "{$fields.date_end.name}_trigger",
+	singleClick : true,
+	step : 1,
+	weekNumbers: false,
+        startWeekday: {$CALENDAR_FDOW|default:'0'},
+	comboObject: combo_{$fields.date_end.name}
+	{rdelim});
+
+	//Call update for first time to round hours and minute values
+	combo_{$fields.date_end.name}.update(false);
+
+{rdelim}); 
+</script>
+</div>
+
+<!-- [/hide] -->
+</div>
+<div class="clear"></div>
 <div class="clear"></div>
 
 
@@ -999,23 +930,8 @@ title='' tabindex="0"
 <!-- [/hide] -->
 </div>
 <div class="clear"></div>
-</div>                    </div>
-</div>
-</div>
-
-
-
-
-<div class="panel panel-default">
-<div class="panel-heading ">
-<a class="" role="button" data-toggle="collapse-edit" aria-expanded="false">
-<div class="col-xs-10 col-sm-11 col-md-11">
-{sugar_translate label='LBL_PANEL_ASSIGNMENT' module='Meetings'}
-</div>
-</a>
-</div>
-<div class="panel-body panel-collapse collapse in panelContainer" id="detailpanel_0" data-id="LBL_PANEL_ASSIGNMENT">
-<div class="tab-content">
+</div>            </div>
+<div class="tab-pane-NOBOOTSTRAPTOGGLER fade" id='tab-content-1'>
 <!-- tab_panel_content.tpl -->
 <div class="row edit-view-row">
 
@@ -1066,9 +982,15 @@ SUGAR.util.doWhen(
 <!-- [/hide] -->
 </div>
 <div class="clear"></div>
-</div>                    </div>
+</div>            </div>
 </div>
-</div>
+
+<div class="panel-content">
+<div>&nbsp;</div>
+
+
+
+
 </div>
 </div>
 
@@ -1161,6 +1083,11 @@ function formSubmitCheck(){ldelim}if(check_form('EditView')){ldelim}document.Edi
     {/literal}
 </script>
 </form>
+{sugar_getscript file="cache/include/javascript/sugar_grp_yui_widgets.js"}
+<script type="text/javascript">
+var EditView_tabs = new YAHOO.widget.TabView("EditView_tabs");
+EditView_tabs.selectTab(0);
+</script>
 <script type="text/javascript">
 YAHOO.util.Event.onContentReady("EditView",
     function () {ldelim} initEditView(document.forms.EditView) {rdelim});
@@ -1278,4 +1205,4 @@ addToValidate('EditView', 'jjwg_maps_address_c', 'varchar', false,'{/literal}{su
 addToValidate('EditView', 'jjwg_maps_geocode_status_c', 'varchar', false,'{/literal}{sugar_translate label='LBL_JJWG_MAPS_GEOCODE_STATUS' module='Meetings' for_js=true}{literal}' );
 addToValidate('EditView', 'jjwg_maps_lng_c', 'float', false,'{/literal}{sugar_translate label='LBL_JJWG_MAPS_LNG' module='Meetings' for_js=true}{literal}' );
 addToValidateBinaryDependency('EditView', 'assigned_user_name', 'alpha', false,'{/literal}{sugar_translate label='ERR_SQS_NO_MATCH_FIELD' module='Meetings' for_js=true}{literal}: {/literal}{sugar_translate label='LBL_ASSIGNED_TO' module='Meetings' for_js=true}{literal}', 'assigned_user_id' );
-</script><script language="javascript">if(typeof sqs_objects == 'undefined'){var sqs_objects = new Array;}sqs_objects['EditView_parent_name']={"form":"EditView","method":"query","modules":["Accounts"],"group":"or","field_list":["name","id"],"populate_list":["parent_name","parent_id"],"required_list":["parent_id"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"order":"name","limit":"30","no_match_text":"No Match"};sqs_objects['EditView_assigned_user_name']={"form":"EditView","method":"get_user_array","field_list":["user_name","id"],"populate_list":["assigned_user_name","assigned_user_id"],"required_list":["assigned_user_id"],"conditions":[{"name":"user_name","op":"like_custom","end":"%","value":""}],"limit":"30","no_match_text":"No Match"};</script>{/literal}
+</script><script language="javascript">if(typeof sqs_objects == 'undefined'){var sqs_objects = new Array;}sqs_objects['EditView_assigned_user_name']={"form":"EditView","method":"get_user_array","field_list":["user_name","id"],"populate_list":["assigned_user_name","assigned_user_id"],"required_list":["assigned_user_id"],"conditions":[{"name":"user_name","op":"like_custom","end":"%","value":""}],"limit":"30","no_match_text":"No Match"};</script>{/literal}

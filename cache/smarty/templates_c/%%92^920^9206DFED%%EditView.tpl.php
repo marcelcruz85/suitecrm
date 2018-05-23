@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.29, created on 2018-05-20 20:36:55
+<?php /* Smarty version 2.6.29, created on 2018-05-22 22:14:15
          compiled from cache/themes/SuiteP/modules/Meetings/EditView.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 49, false),array('modifier', 'strip_semicolon', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 110, false),array('modifier', 'lookup', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 180, false),array('modifier', 'count', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 282, false),array('modifier', 'default', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 462, false),array('function', 'sugar_include', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 71, false),array('function', 'sugar_translate', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 92, false),array('function', 'counter', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 117, false),array('function', 'html_options', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 155, false),array('function', 'sugar_getimagepath', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 183, false),array('function', 'sugar_getjspath', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 435, false),array('function', 'sugar_getscript', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 930, false),array('block', 'minify', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 108, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 49, false),array('modifier', 'strip_semicolon', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 124, false),array('modifier', 'lookup', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 194, false),array('modifier', 'count', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 296, false),array('modifier', 'default', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 791, false),array('function', 'sugar_include', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 71, false),array('function', 'sugar_translate', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 79, false),array('function', 'counter', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 131, false),array('function', 'html_options', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 169, false),array('function', 'sugar_getimagepath', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 197, false),array('function', 'sugar_getscript', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 687, false),array('function', 'sugar_getjspath', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 764, false),array('block', 'minify', 'cache/themes/SuiteP/modules/Meetings/EditView.tpl', 122, false),)), $this); ?>
 
 
 
@@ -136,30 +136,48 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'c
 <div id="EditView_tabs">
 
 <ul class="nav nav-tabs">
-</ul>
-<div class="clearfix"></div>
-<div class="tab-content" style="padding: 0; border: 0;">
-
-<div class="tab-pane panel-collapse">&nbsp;</div>
-</div>
-
-<div class="panel-content">
-<div>&nbsp;</div>
 
 
-
-
-<div class="panel panel-default">
-<div class="panel-heading ">
-<a class="" role="button" data-toggle="collapse-edit" aria-expanded="false">
-<div class="col-xs-10 col-sm-11 col-md-11">
+<li role="presentation" class="active">
+<a id="tab0" data-toggle="tab" class="hidden-xs">
 <?php echo smarty_function_sugar_translate(array('label' => 'LBL_MEETING_INFORMATION','module' => 'Meetings'), $this);?>
 
-</div>
 </a>
-</div>
-<div class="panel-body panel-collapse collapse in panelContainer" id="detailpanel_-1" data-id="LBL_MEETING_INFORMATION">
+
+
+<!-- Counting Tabs 1-->
+<a id="xstab0" href="#" class="visible-xs first-tab-xs dropdown-toggle" data-toggle="dropdown">
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_MEETING_INFORMATION','module' => 'Meetings'), $this);?>
+
+</a>
+<ul id="first-tab-menu-xs" class="dropdown-menu">
+<li role="presentation">
+<a id="tab0" data-toggle="tab" onclick="changeFirstTab(this, 'tab-content-0');">
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_MEETING_INFORMATION','module' => 'Meetings'), $this);?>
+
+</a>
+</li>
+<li role="presentation">
+<a id="tab1" data-toggle="tab" onclick="changeFirstTab(this, 'tab-content-1');">
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_PANEL_ASSIGNMENT','module' => 'Meetings'), $this);?>
+
+</a>
+</li>
+</ul>
+</li>
+
+
+<li role="presentation" class="hidden-xs">
+<a id="tab1"  data-toggle="tab">
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_PANEL_ASSIGNMENT','module' => 'Meetings'), $this);?>
+
+</a>
+</li>
+</ul>
+<div class="clearfix"></div>
 <div class="tab-content">
+
+<div class="tab-pane-NOBOOTSTRAPTOGGLER active fade in" id='tab-content-0'>
 <!-- tab_panel_content.tpl -->
 <div class="row edit-view-row">
 
@@ -617,390 +635,7 @@ SUGAR.AutoComplete.<?php echo $this->_tpl_vars['ac_key']; ?>
 <div class="col-xs-12 col-sm-6 edit-view-row-item">
 
 
-<div class="col-xs-12 col-sm-4 label" data-label="LBL_DATE">
-
-<?php $this->_tag_stack[] = array('minify', array()); $_block_repeat=true;smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
-<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_DATE','module' => 'Meetings'), $this);?>
-<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
-<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
-:
-
-<span class="required">*</span>
-<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
-</div>
-
-<div class="col-xs-12 col-sm-8 edit-view-field " type="datetimecombo" field="date_start"  >
-<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
-
-
-<table border="0" cellpadding="0" cellspacing="0" class="dateTime">
-<tr valign="middle">
-<td nowrap class="dateTimeComboColumn">
-<input autocomplete="off" type="text" id="<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
-_date" class="datetimecombo_date" value="<?php echo $this->_tpl_vars['fields'][$this->_tpl_vars['fields']['date_start']['name']]['value']; ?>
-" size="11" maxlength="10" title='' tabindex="0" onblur="combo_<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
-.update();" onchange="combo_<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
-.update(); SugarWidgetScheduler.update_time();"    >
-<button type="button" id="<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
-_trigger" class="btn btn-danger" onclick="return false;"><span class="suitepicon suitepicon-module-calendar"  alt="<?php echo $this->_tpl_vars['APP']['LBL_ENTER_DATE']; ?>
-"></span></button>
-</td>
-<td nowrap class="dateTimeComboColumn">
-<div id="<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
-_time_section" class="datetimecombo_time_section"></div>
-</td>
-</tr>
-</table>
-<input type="hidden" class="DateTimeCombo" id="<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
-" name="<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
-" value="<?php echo $this->_tpl_vars['fields'][$this->_tpl_vars['fields']['date_start']['name']]['value']; ?>
-">
-<script type="text/javascript" src="<?php echo smarty_function_sugar_getjspath(array('file' => "include/SugarFields/Fields/Datetimecombo/Datetimecombo.js"), $this);?>
-"></script>
-<script type="text/javascript">
-var combo_<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
- = new Datetimecombo("<?php echo $this->_tpl_vars['fields'][$this->_tpl_vars['fields']['date_start']['name']]['value']; ?>
-", "<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
-", "<?php echo $this->_tpl_vars['TIME_FORMAT']; ?>
-", "0", '', false, true);
-//Render the remaining widget fields
-text = combo_<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
-.html('SugarWidgetScheduler.update_time();');
-document.getElementById('<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
-_time_section').innerHTML = text;
-
-//Call eval on the update function to handle updates to calendar picker object
-eval(combo_<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
-.jsscript('SugarWidgetScheduler.update_time();'));
-
-addToValidateBinaryDependency('<?php echo $this->_tpl_vars['form_name']; ?>
-',"<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
-_hours", 'alpha', false, "<?php echo $this->_tpl_vars['APP']['ERR_MISSING_REQUIRED_FIELDS']; ?>
- <?php echo $this->_tpl_vars['APP']['LBL_HOURS']; ?>
-" ,"<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
-_date");
-addToValidateBinaryDependency('<?php echo $this->_tpl_vars['form_name']; ?>
-', "<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
-_minutes", 'alpha', false, "<?php echo $this->_tpl_vars['APP']['ERR_MISSING_REQUIRED_FIELDS']; ?>
- <?php echo $this->_tpl_vars['APP']['LBL_MINUTES']; ?>
-" ,"<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
-_date");
-addToValidateBinaryDependency('<?php echo $this->_tpl_vars['form_name']; ?>
-', "<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
-_meridiem", 'alpha', false, "<?php echo $this->_tpl_vars['APP']['ERR_MISSING_REQUIRED_FIELDS']; ?>
- <?php echo $this->_tpl_vars['APP']['LBL_MERIDIEM']; ?>
-","<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
-_date");
-
-YAHOO.util.Event.onDOMReady(function()
-{
-
-	Calendar.setup ({
-	onClose : update_<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
-,
-	inputField : "<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
-_date",
-    form : "EditView",
-	ifFormat : "<?php echo $this->_tpl_vars['CALENDAR_FORMAT']; ?>
-",
-	daFormat : "<?php echo $this->_tpl_vars['CALENDAR_FORMAT']; ?>
-",
-	button : "<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
-_trigger",
-	singleClick : true,
-	step : 1,
-	weekNumbers: false,
-        startWeekday: <?php echo ((is_array($_tmp=@$this->_tpl_vars['CALENDAR_FDOW'])) ? $this->_run_mod_handler('default', true, $_tmp, '0') : smarty_modifier_default($_tmp, '0')); ?>
-,
-	comboObject: combo_<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
-
-	});
-
-	//Call update for first time to round hours and minute values
-	combo_<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
-.update(false);
-
-}); 
-</script>
-</div>
-
-<!-- [/hide] -->
-</div>
-
-
-<div class="col-xs-12 col-sm-6 edit-view-row-item">
-
-
-<div class="col-xs-12 col-sm-4 label" data-label="LBL_LIST_RELATED_TO">
-
-<?php $this->_tag_stack[] = array('minify', array()); $_block_repeat=true;smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
-<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_LIST_RELATED_TO','module' => 'Meetings'), $this);?>
-<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
-<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
-:
-
-<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
-</div>
-
-<div class="col-xs-12 col-sm-8 edit-view-field " type="parent" field="parent_name"  >
-<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
-
-
-<select name='parent_type' tabindex="0" id='parent_type' title=''  onchange='document.<?php echo $this->_tpl_vars['form_name']; ?>
-.<?php echo $this->_tpl_vars['fields']['parent_name']['name']; ?>
-.value="";document.<?php echo $this->_tpl_vars['form_name']; ?>
-.parent_id.value=""; changeParentQS("<?php echo $this->_tpl_vars['fields']['parent_name']['name']; ?>
-"); checkParentType(document.<?php echo $this->_tpl_vars['form_name']; ?>
-.parent_type.value, document.<?php echo $this->_tpl_vars['form_name']; ?>
-.btn_<?php echo $this->_tpl_vars['fields']['parent_name']['name']; ?>
-);'>
-<?php echo smarty_function_html_options(array('options' => $this->_tpl_vars['fields']['parent_name']['options'],'selected' => $this->_tpl_vars['fields']['parent_type']['value'],'sortoptions' => true), $this);?>
-
-</select>
-<?php if (empty ( $this->_tpl_vars['fields']['parent_name']['options'][$this->_tpl_vars['fields']['parent_type']['value']] )): ?>
-<?php $this->assign('keepParent', 0); ?>
-<?php else: ?>
-<?php $this->assign('keepParent', 1); ?>
-<?php endif; ?>
-<input type="text" name="<?php echo $this->_tpl_vars['fields']['parent_name']['name']; ?>
-" id="<?php echo $this->_tpl_vars['fields']['parent_name']['name']; ?>
-" class="sqsEnabled" tabindex="0"
-size="" <?php if ($this->_tpl_vars['keepParent']): ?>value="<?php echo $this->_tpl_vars['fields']['parent_name']['value']; ?>
-"<?php endif; ?> autocomplete="off"><input type="hidden" name="<?php echo $this->_tpl_vars['fields']['parent_id']['name']; ?>
-" id="<?php echo $this->_tpl_vars['fields']['parent_id']['name']; ?>
-"  
-<?php if ($this->_tpl_vars['keepParent']): ?>value="<?php echo $this->_tpl_vars['fields']['parent_id']['value']; ?>
-"<?php endif; ?>>
-<span class="id-ff multiple">
-<button type="button" name="btn_<?php echo $this->_tpl_vars['fields']['parent_name']['name']; ?>
-" id="btn_<?php echo $this->_tpl_vars['fields']['parent_name']['name']; ?>
-" tabindex="0"	
-title="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_SELECT_BUTTON_TITLE'), $this);?>
-" class="button firstChild" value="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_SELECT_BUTTON_LABEL'), $this);?>
-"
-onclick='open_popup(document.<?php echo $this->_tpl_vars['form_name']; ?>
-.parent_type.value, 600, 400, "", true, false, <?php echo '{"call_back_function":"set_return","form_name":"EditView","field_to_name_array":{"id":"parent_id","name":"parent_name"}}'; ?>
-, "single", true);' ><span class="suitepicon suitepicon-action-select"></span></button><button type="button" name="btn_clr_<?php echo $this->_tpl_vars['fields']['parent_name']['name']; ?>
-" id="btn_clr_<?php echo $this->_tpl_vars['fields']['parent_name']['name']; ?>
-" tabindex="0" title="<?php echo smarty_function_sugar_translate(array('label' => ""), $this);?>
-" class="button lastChild" onclick="this.form.<?php echo $this->_tpl_vars['fields']['parent_name']['name']; ?>
-.value = ''; this.form.<?php echo $this->_tpl_vars['fields']['parent_id']['name']; ?>
-.value = '';" value="<?php echo smarty_function_sugar_translate(array('label' => ""), $this);?>
-" ><span class="suitepicon suitepicon-action-clear"></span></button>
-</span>
-<?php echo '
-<script type="text/javascript">
-if (typeof(changeParentQS) == \'undefined\'){
-function changeParentQS(field) {
-    if(typeof sqs_objects == \'undefined\') {
-       return;
-    }
-	field = YAHOO.util.Dom.get(field);
-    var form = field.form;
-    var sqsId = form.id + "_" + field.id;
-    var typeField =  form.elements.parent_type;
-    var new_module = typeField.value;
-    //Update the SQS globals to reflect the new module choice
-    if (typeof(QSFieldsArray[sqsId]) != \'undefined\')
-    {
-        QSFieldsArray[sqsId].sqs.modules = new Array(new_module);
-    }
-	if(typeof QSProcessedFieldsArray != \'undefined\')
-    {
-	   QSProcessedFieldsArray[sqsId] = false;
-    }
-    if(sqs_objects[sqsId] == undefined){
-    	return;
-    }
-    sqs_objects[sqsId]["modules"] = new Array(new_module);
-    if(typeof(disabledModules) != \'undefined\' && typeof(disabledModules[new_module]) != \'undefined\') {
-		sqs_objects[sqsId]["disable"] = true;
-		field.readOnly = true;
-	} else {
-		sqs_objects[sqsId]["disable"] = false;
-		field.readOnly = false;
-    }
-    enableQS(false);
-}}
-</script>
-<script>var disabledModules=[];</script>
-<script language="javascript">if(typeof sqs_objects == \'undefined\'){var sqs_objects = new Array;}sqs_objects[\'EditView_parent_name\']={"form":"EditView","method":"query","modules":["'; ?>
-<?php if (! empty ( $this->_tpl_vars['fields']['parent_type']['value'] )): ?><?php echo $this->_tpl_vars['fields']['parent_type']['value']; ?>
-<?php else: ?>Accounts<?php endif; ?><?php echo '"],"group":"or","field_list":["name","id"],"populate_list":["parent_name","parent_id"],"required_list":["parent_id"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"order":"name","limit":"30","no_match_text":"No Match"};</script>
-<script>
-//change this in case it wasn\'t the default on editing existing items.
-$(document).ready(function(){
-	changeParentQS("parent_name")
-});
-</script>
-'; ?>
-
-</div>
-
-<!-- [/hide] -->
-</div>
-<div class="clear"></div>
-<div class="clear"></div>
-
-
-
-<div class="col-xs-12 col-sm-6 edit-view-row-item">
-
-
-<div class="col-xs-12 col-sm-4 label" data-label="LBL_DATE_END">
-
-<?php $this->_tag_stack[] = array('minify', array()); $_block_repeat=true;smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
-<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_DATE_END','module' => 'Meetings'), $this);?>
-<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
-<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
-:
-
-<span class="required">*</span>
-<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
-</div>
-
-<div class="col-xs-12 col-sm-8 edit-view-field " type="datetimecombo" field="date_end"  >
-<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
-
-
-<table border="0" cellpadding="0" cellspacing="0" class="dateTime">
-<tr valign="middle">
-<td nowrap class="dateTimeComboColumn">
-<input autocomplete="off" type="text" id="<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
-_date" class="datetimecombo_date" value="<?php echo $this->_tpl_vars['fields'][$this->_tpl_vars['fields']['date_end']['name']]['value']; ?>
-" size="11" maxlength="10" title='' tabindex="0" onblur="combo_<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
-.update();" onchange="combo_<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
-.update(); SugarWidgetScheduler.update_time();"    >
-<button type="button" id="<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
-_trigger" class="btn btn-danger" onclick="return false;"><span class="suitepicon suitepicon-module-calendar"  alt="<?php echo $this->_tpl_vars['APP']['LBL_ENTER_DATE']; ?>
-"></span></button>
-</td>
-<td nowrap class="dateTimeComboColumn">
-<div id="<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
-_time_section" class="datetimecombo_time_section"></div>
-</td>
-</tr>
-</table>
-<input type="hidden" class="DateTimeCombo" id="<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
-" name="<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
-" value="<?php echo $this->_tpl_vars['fields'][$this->_tpl_vars['fields']['date_end']['name']]['value']; ?>
-">
-<script type="text/javascript" src="<?php echo smarty_function_sugar_getjspath(array('file' => "include/SugarFields/Fields/Datetimecombo/Datetimecombo.js"), $this);?>
-"></script>
-<script type="text/javascript">
-var combo_<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
- = new Datetimecombo("<?php echo $this->_tpl_vars['fields'][$this->_tpl_vars['fields']['date_end']['name']]['value']; ?>
-", "<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
-", "<?php echo $this->_tpl_vars['TIME_FORMAT']; ?>
-", "0", '', false, true);
-//Render the remaining widget fields
-text = combo_<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
-.html('SugarWidgetScheduler.update_time();');
-document.getElementById('<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
-_time_section').innerHTML = text;
-
-//Call eval on the update function to handle updates to calendar picker object
-eval(combo_<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
-.jsscript('SugarWidgetScheduler.update_time();'));
-
-addToValidateBinaryDependency('<?php echo $this->_tpl_vars['form_name']; ?>
-',"<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
-_hours", 'alpha', false, "<?php echo $this->_tpl_vars['APP']['ERR_MISSING_REQUIRED_FIELDS']; ?>
- <?php echo $this->_tpl_vars['APP']['LBL_HOURS']; ?>
-" ,"<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
-_date");
-addToValidateBinaryDependency('<?php echo $this->_tpl_vars['form_name']; ?>
-', "<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
-_minutes", 'alpha', false, "<?php echo $this->_tpl_vars['APP']['ERR_MISSING_REQUIRED_FIELDS']; ?>
- <?php echo $this->_tpl_vars['APP']['LBL_MINUTES']; ?>
-" ,"<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
-_date");
-addToValidateBinaryDependency('<?php echo $this->_tpl_vars['form_name']; ?>
-', "<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
-_meridiem", 'alpha', false, "<?php echo $this->_tpl_vars['APP']['ERR_MISSING_REQUIRED_FIELDS']; ?>
- <?php echo $this->_tpl_vars['APP']['LBL_MERIDIEM']; ?>
-","<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
-_date");
-
-YAHOO.util.Event.onDOMReady(function()
-{
-
-	Calendar.setup ({
-	onClose : update_<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
-,
-	inputField : "<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
-_date",
-    form : "EditView",
-	ifFormat : "<?php echo $this->_tpl_vars['CALENDAR_FORMAT']; ?>
-",
-	daFormat : "<?php echo $this->_tpl_vars['CALENDAR_FORMAT']; ?>
-",
-	button : "<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
-_trigger",
-	singleClick : true,
-	step : 1,
-	weekNumbers: false,
-        startWeekday: <?php echo ((is_array($_tmp=@$this->_tpl_vars['CALENDAR_FDOW'])) ? $this->_run_mod_handler('default', true, $_tmp, '0') : smarty_modifier_default($_tmp, '0')); ?>
-,
-	comboObject: combo_<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
-
-	});
-
-	//Call update for first time to round hours and minute values
-	combo_<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
-.update(false);
-
-}); 
-</script>
-</div>
-
-<!-- [/hide] -->
-</div>
-
-
-<div class="col-xs-12 col-sm-6 edit-view-row-item">
-
-
-<div class="col-xs-12 col-sm-4 label" data-label="LBL_LOCATION">
-
-<?php $this->_tag_stack[] = array('minify', array()); $_block_repeat=true;smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
-<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_LOCATION','module' => 'Meetings'), $this);?>
-<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
-<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
-:
-
-<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
-</div>
-
-<div class="col-xs-12 col-sm-8 edit-view-field " type="varchar" field="location"  >
-<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
-
-
-<?php if (strlen ( $this->_tpl_vars['fields']['location']['value'] ) <= 0): ?>
-<?php $this->assign('value', $this->_tpl_vars['fields']['location']['default_value']); ?>
-<?php else: ?>
-<?php $this->assign('value', $this->_tpl_vars['fields']['location']['value']); ?>
-<?php endif; ?>  
-<input type='text' name='<?php echo $this->_tpl_vars['fields']['location']['name']; ?>
-' 
-id='<?php echo $this->_tpl_vars['fields']['location']['name']; ?>
-' size='30' 
-maxlength='50' 
-value='<?php echo $this->_tpl_vars['value']; ?>
-' title=''      >
-</div>
-
-<!-- [/hide] -->
-</div>
-<div class="clear"></div>
-<div class="clear"></div>
-
-
-
-<div class="col-xs-12 col-sm-12 edit-view-row-item">
-
-
-<div class="col-xs-12 col-sm-2 label" data-label="LBL_DURATION">
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_DURATION">
 
 <?php $this->_tag_stack[] = array('minify', array()); $_block_repeat=true;smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
 <?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_DURATION','module' => 'Meetings'), $this);?>
@@ -1011,7 +646,7 @@ value='<?php echo $this->_tpl_vars['value']; ?>
 <?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
 </div>
 
-<div class="col-xs-12 col-sm-8 edit-view-field " type="enum" field="duration" colspan='3' >
+<div class="col-xs-12 col-sm-8 edit-view-field " type="enum" field="duration"  >
 <?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
 
 
@@ -1421,6 +1056,274 @@ SUGAR.AutoComplete.<?php echo $this->_tpl_vars['ac_key']; ?>
 
 <!-- [/hide] -->
 </div>
+
+
+<div class="col-xs-12 col-sm-6 edit-view-row-item">
+
+
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_LOCATION">
+
+<?php $this->_tag_stack[] = array('minify', array()); $_block_repeat=true;smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
+<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_LOCATION','module' => 'Meetings'), $this);?>
+<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
+<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+:
+
+<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
+</div>
+
+<div class="col-xs-12 col-sm-8 edit-view-field " type="varchar" field="location"  >
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<?php if (strlen ( $this->_tpl_vars['fields']['location']['value'] ) <= 0): ?>
+<?php $this->assign('value', $this->_tpl_vars['fields']['location']['default_value']); ?>
+<?php else: ?>
+<?php $this->assign('value', $this->_tpl_vars['fields']['location']['value']); ?>
+<?php endif; ?>  
+<input type='text' name='<?php echo $this->_tpl_vars['fields']['location']['name']; ?>
+' 
+id='<?php echo $this->_tpl_vars['fields']['location']['name']; ?>
+' size='30' 
+maxlength='50' 
+value='<?php echo $this->_tpl_vars['value']; ?>
+' title=''      >
+</div>
+
+<!-- [/hide] -->
+</div>
+<div class="clear"></div>
+<div class="clear"></div>
+
+
+
+<div class="col-xs-12 col-sm-6 edit-view-row-item">
+
+
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_DATE">
+
+<?php $this->_tag_stack[] = array('minify', array()); $_block_repeat=true;smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
+<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_DATE','module' => 'Meetings'), $this);?>
+<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
+<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+:
+
+<span class="required">*</span>
+<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
+</div>
+
+<div class="col-xs-12 col-sm-8 edit-view-field " type="datetimecombo" field="date_start"  >
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<table border="0" cellpadding="0" cellspacing="0" class="dateTime">
+<tr valign="middle">
+<td nowrap class="dateTimeComboColumn">
+<input autocomplete="off" type="text" id="<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+_date" class="datetimecombo_date" value="<?php echo $this->_tpl_vars['fields'][$this->_tpl_vars['fields']['date_start']['name']]['value']; ?>
+" size="11" maxlength="10" title='' tabindex="0" onblur="combo_<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+.update();" onchange="combo_<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+.update(); SugarWidgetScheduler.update_time();"    >
+<button type="button" id="<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+_trigger" class="btn btn-danger" onclick="return false;"><span class="suitepicon suitepicon-module-calendar"  alt="<?php echo $this->_tpl_vars['APP']['LBL_ENTER_DATE']; ?>
+"></span></button>
+</td>
+<td nowrap class="dateTimeComboColumn">
+<div id="<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+_time_section" class="datetimecombo_time_section"></div>
+</td>
+</tr>
+</table>
+<input type="hidden" class="DateTimeCombo" id="<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+" name="<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+" value="<?php echo $this->_tpl_vars['fields'][$this->_tpl_vars['fields']['date_start']['name']]['value']; ?>
+">
+<script type="text/javascript" src="<?php echo smarty_function_sugar_getjspath(array('file' => "include/SugarFields/Fields/Datetimecombo/Datetimecombo.js"), $this);?>
+"></script>
+<script type="text/javascript">
+var combo_<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+ = new Datetimecombo("<?php echo $this->_tpl_vars['fields'][$this->_tpl_vars['fields']['date_start']['name']]['value']; ?>
+", "<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+", "<?php echo $this->_tpl_vars['TIME_FORMAT']; ?>
+", "0", '', false, true);
+//Render the remaining widget fields
+text = combo_<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+.html('SugarWidgetScheduler.update_time();');
+document.getElementById('<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+_time_section').innerHTML = text;
+
+//Call eval on the update function to handle updates to calendar picker object
+eval(combo_<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+.jsscript('SugarWidgetScheduler.update_time();'));
+
+addToValidateBinaryDependency('<?php echo $this->_tpl_vars['form_name']; ?>
+',"<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+_hours", 'alpha', false, "<?php echo $this->_tpl_vars['APP']['ERR_MISSING_REQUIRED_FIELDS']; ?>
+ <?php echo $this->_tpl_vars['APP']['LBL_HOURS']; ?>
+" ,"<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+_date");
+addToValidateBinaryDependency('<?php echo $this->_tpl_vars['form_name']; ?>
+', "<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+_minutes", 'alpha', false, "<?php echo $this->_tpl_vars['APP']['ERR_MISSING_REQUIRED_FIELDS']; ?>
+ <?php echo $this->_tpl_vars['APP']['LBL_MINUTES']; ?>
+" ,"<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+_date");
+addToValidateBinaryDependency('<?php echo $this->_tpl_vars['form_name']; ?>
+', "<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+_meridiem", 'alpha', false, "<?php echo $this->_tpl_vars['APP']['ERR_MISSING_REQUIRED_FIELDS']; ?>
+ <?php echo $this->_tpl_vars['APP']['LBL_MERIDIEM']; ?>
+","<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+_date");
+
+YAHOO.util.Event.onDOMReady(function()
+{
+
+	Calendar.setup ({
+	onClose : update_<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+,
+	inputField : "<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+_date",
+    form : "EditView",
+	ifFormat : "<?php echo $this->_tpl_vars['CALENDAR_FORMAT']; ?>
+",
+	daFormat : "<?php echo $this->_tpl_vars['CALENDAR_FORMAT']; ?>
+",
+	button : "<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+_trigger",
+	singleClick : true,
+	step : 1,
+	weekNumbers: false,
+        startWeekday: <?php echo ((is_array($_tmp=@$this->_tpl_vars['CALENDAR_FDOW'])) ? $this->_run_mod_handler('default', true, $_tmp, '0') : smarty_modifier_default($_tmp, '0')); ?>
+,
+	comboObject: combo_<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+
+	});
+
+	//Call update for first time to round hours and minute values
+	combo_<?php echo $this->_tpl_vars['fields']['date_start']['name']; ?>
+.update(false);
+
+}); 
+</script>
+</div>
+
+<!-- [/hide] -->
+</div>
+
+
+<div class="col-xs-12 col-sm-6 edit-view-row-item">
+
+
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_DATE_END">
+
+<?php $this->_tag_stack[] = array('minify', array()); $_block_repeat=true;smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
+<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_DATE_END','module' => 'Meetings'), $this);?>
+<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
+<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+:
+
+<span class="required">*</span>
+<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_minify($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
+</div>
+
+<div class="col-xs-12 col-sm-8 edit-view-field " type="datetimecombo" field="date_end"  >
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<table border="0" cellpadding="0" cellspacing="0" class="dateTime">
+<tr valign="middle">
+<td nowrap class="dateTimeComboColumn">
+<input autocomplete="off" type="text" id="<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+_date" class="datetimecombo_date" value="<?php echo $this->_tpl_vars['fields'][$this->_tpl_vars['fields']['date_end']['name']]['value']; ?>
+" size="11" maxlength="10" title='' tabindex="0" onblur="combo_<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+.update();" onchange="combo_<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+.update(); SugarWidgetScheduler.update_time();"    >
+<button type="button" id="<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+_trigger" class="btn btn-danger" onclick="return false;"><span class="suitepicon suitepicon-module-calendar"  alt="<?php echo $this->_tpl_vars['APP']['LBL_ENTER_DATE']; ?>
+"></span></button>
+</td>
+<td nowrap class="dateTimeComboColumn">
+<div id="<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+_time_section" class="datetimecombo_time_section"></div>
+</td>
+</tr>
+</table>
+<input type="hidden" class="DateTimeCombo" id="<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+" name="<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+" value="<?php echo $this->_tpl_vars['fields'][$this->_tpl_vars['fields']['date_end']['name']]['value']; ?>
+">
+<script type="text/javascript" src="<?php echo smarty_function_sugar_getjspath(array('file' => "include/SugarFields/Fields/Datetimecombo/Datetimecombo.js"), $this);?>
+"></script>
+<script type="text/javascript">
+var combo_<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+ = new Datetimecombo("<?php echo $this->_tpl_vars['fields'][$this->_tpl_vars['fields']['date_end']['name']]['value']; ?>
+", "<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+", "<?php echo $this->_tpl_vars['TIME_FORMAT']; ?>
+", "0", '', false, true);
+//Render the remaining widget fields
+text = combo_<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+.html('SugarWidgetScheduler.update_time();');
+document.getElementById('<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+_time_section').innerHTML = text;
+
+//Call eval on the update function to handle updates to calendar picker object
+eval(combo_<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+.jsscript('SugarWidgetScheduler.update_time();'));
+
+addToValidateBinaryDependency('<?php echo $this->_tpl_vars['form_name']; ?>
+',"<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+_hours", 'alpha', false, "<?php echo $this->_tpl_vars['APP']['ERR_MISSING_REQUIRED_FIELDS']; ?>
+ <?php echo $this->_tpl_vars['APP']['LBL_HOURS']; ?>
+" ,"<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+_date");
+addToValidateBinaryDependency('<?php echo $this->_tpl_vars['form_name']; ?>
+', "<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+_minutes", 'alpha', false, "<?php echo $this->_tpl_vars['APP']['ERR_MISSING_REQUIRED_FIELDS']; ?>
+ <?php echo $this->_tpl_vars['APP']['LBL_MINUTES']; ?>
+" ,"<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+_date");
+addToValidateBinaryDependency('<?php echo $this->_tpl_vars['form_name']; ?>
+', "<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+_meridiem", 'alpha', false, "<?php echo $this->_tpl_vars['APP']['ERR_MISSING_REQUIRED_FIELDS']; ?>
+ <?php echo $this->_tpl_vars['APP']['LBL_MERIDIEM']; ?>
+","<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+_date");
+
+YAHOO.util.Event.onDOMReady(function()
+{
+
+	Calendar.setup ({
+	onClose : update_<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+,
+	inputField : "<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+_date",
+    form : "EditView",
+	ifFormat : "<?php echo $this->_tpl_vars['CALENDAR_FORMAT']; ?>
+",
+	daFormat : "<?php echo $this->_tpl_vars['CALENDAR_FORMAT']; ?>
+",
+	button : "<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+_trigger",
+	singleClick : true,
+	step : 1,
+	weekNumbers: false,
+        startWeekday: <?php echo ((is_array($_tmp=@$this->_tpl_vars['CALENDAR_FDOW'])) ? $this->_run_mod_handler('default', true, $_tmp, '0') : smarty_modifier_default($_tmp, '0')); ?>
+,
+	comboObject: combo_<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+
+	});
+
+	//Call update for first time to round hours and minute values
+	combo_<?php echo $this->_tpl_vars['fields']['date_end']['name']; ?>
+.update(false);
+
+}); 
+</script>
+</div>
+
+<!-- [/hide] -->
+</div>
+<div class="clear"></div>
 <div class="clear"></div>
 
 
@@ -1493,24 +1396,8 @@ title='' tabindex="0"
 <!-- [/hide] -->
 </div>
 <div class="clear"></div>
-</div>                    </div>
-</div>
-</div>
-
-
-
-
-<div class="panel panel-default">
-<div class="panel-heading ">
-<a class="" role="button" data-toggle="collapse-edit" aria-expanded="false">
-<div class="col-xs-10 col-sm-11 col-md-11">
-<?php echo smarty_function_sugar_translate(array('label' => 'LBL_PANEL_ASSIGNMENT','module' => 'Meetings'), $this);?>
-
-</div>
-</a>
-</div>
-<div class="panel-body panel-collapse collapse in panelContainer" id="detailpanel_0" data-id="LBL_PANEL_ASSIGNMENT">
-<div class="tab-content">
+</div>            </div>
+<div class="tab-pane-NOBOOTSTRAPTOGGLER fade" id='tab-content-1'>
 <!-- tab_panel_content.tpl -->
 <div class="row edit-view-row">
 
@@ -1584,9 +1471,15 @@ _<?php echo $this->_tpl_vars['fields']['assigned_user_name']['name']; ?>
 <!-- [/hide] -->
 </div>
 <div class="clear"></div>
-</div>                    </div>
+</div>            </div>
 </div>
-</div>
+
+<div class="panel-content">
+<div>&nbsp;</div>
+
+
+
+
 </div>
 </div>
 
@@ -1732,6 +1625,12 @@ EditView<?php echo '",function() {
 
 </script>
 </form>
+<?php echo smarty_function_sugar_getscript(array('file' => "cache/include/javascript/sugar_grp_yui_widgets.js"), $this);?>
+
+<script type="text/javascript">
+var EditView_tabs = new YAHOO.widget.TabView("EditView_tabs");
+EditView_tabs.selectTab(0);
+</script>
 <script type="text/javascript">
 YAHOO.util.Event.onContentReady("EditView",
     function () { initEditView(document.forms.EditView) });
@@ -1950,4 +1849,4 @@ addToValidateBinaryDependency(\'EditView\', \'assigned_user_name\', \'alpha\', f
 <?php echo ': '; ?>
 <?php echo smarty_function_sugar_translate(array('label' => 'LBL_ASSIGNED_TO','module' => 'Meetings','for_js' => true), $this);?>
 <?php echo '\', \'assigned_user_id\' );
-</script><script language="javascript">if(typeof sqs_objects == \'undefined\'){var sqs_objects = new Array;}sqs_objects[\'EditView_parent_name\']={"form":"EditView","method":"query","modules":["Accounts"],"group":"or","field_list":["name","id"],"populate_list":["parent_name","parent_id"],"required_list":["parent_id"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"order":"name","limit":"30","no_match_text":"No Match"};sqs_objects[\'EditView_assigned_user_name\']={"form":"EditView","method":"get_user_array","field_list":["user_name","id"],"populate_list":["assigned_user_name","assigned_user_id"],"required_list":["assigned_user_id"],"conditions":[{"name":"user_name","op":"like_custom","end":"%","value":""}],"limit":"30","no_match_text":"No Match"};</script>'; ?>
+</script><script language="javascript">if(typeof sqs_objects == \'undefined\'){var sqs_objects = new Array;}sqs_objects[\'EditView_assigned_user_name\']={"form":"EditView","method":"get_user_array","field_list":["user_name","id"],"populate_list":["assigned_user_name","assigned_user_id"],"required_list":["assigned_user_id"],"conditions":[{"name":"user_name","op":"like_custom","end":"%","value":""}],"limit":"30","no_match_text":"No Match"};</script>'; ?>

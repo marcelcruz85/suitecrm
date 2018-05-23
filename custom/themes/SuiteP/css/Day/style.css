@@ -606,3 +606,9 @@ footer {
         margin: 0px 10px -2px !important
     }
 }
+
+@media(max-width:1366px) {
+    .modal-lg{
+        width: 100% !important;
+    }
+}

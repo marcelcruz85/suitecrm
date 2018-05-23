@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.29, created on 2018-05-20 20:36:55
+<?php /* Smarty version 2.6.29, created on 2018-05-22 22:14:15
          compiled from themes/SuiteP/modules/Meetings/tpls/footer.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_include', 'themes/SuiteP/modules/Meetings/tpls/footer.tpl', 55, false),)), $this); ?>

@@ -87,14 +87,6 @@ array (
           ),
           1 => 
           array (
-            'name' => 'parent_name',
-            'label' => 'LBL_LIST_RELATED_TO',
-          ),
-        ),
-        2 => 
-        array (
-          0 => 
-          array (
             'name' => 'date_due',
             'type' => 'datetimecombo',
             'displayParams' => 
@@ -103,13 +95,8 @@ array (
               'showFormats' => true,
             ),
           ),
-          1 => 
-          array (
-            'name' => 'contact_name',
-            'label' => 'LBL_CONTACT_NAME',
-          ),
         ),
-        3 => 
+        2 => 
         array (
           0 => 
           array (
@@ -120,7 +107,7 @@ array (
             ),
           ),
         ),
-        4 => 
+        3 => 
         array (
           0 => 
           array (

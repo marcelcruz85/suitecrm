@@ -35,41 +35,25 @@ array (
           'field' => '30',
         ),
       ),
-      'useTabs' => false,
+      'useTabs' => true,
       'tabDefs' => 
       array (
-        'DEFAULT' => 
+        'LBL_TASK_INFORMATION' => 
         array (
-          'newTab' => false,
+          'newTab' => true,
           'panelDefault' => 'expanded',
         ),
       ),
     ),
     'panels' => 
     array (
-      'default' => 
+      'lbl_task_information' => 
       array (
         0 => 
         array (
           0 => 
           array (
             'name' => 'name',
-            'displayParams' => 
-            array (
-              'required' => true,
-            ),
-          ),
-          1 => 
-          array (
-            'name' => 'assigned_user_name',
-            'label' => 'LBL_ASSIGNED_TO_NAME',
-          ),
-        ),
-        1 => 
-        array (
-          0 => 
-          array (
-            'name' => 'priority',
             'displayParams' => 
             array (
               'required' => true,
@@ -84,7 +68,7 @@ array (
             ),
           ),
         ),
-        2 => 
+        1 => 
         array (
           0 => 
           array (
@@ -107,20 +91,23 @@ array (
             ),
           ),
         ),
-        3 => 
+        2 => 
         array (
           0 => 
           array (
-            'name' => 'parent_name',
-            'label' => 'LBL_LIST_RELATED_TO',
+            'name' => 'priority',
+            'displayParams' => 
+            array (
+              'required' => true,
+            ),
           ),
           1 => 
           array (
-            'name' => 'contact_name',
-            'label' => 'LBL_CONTACT_NAME',
+            'name' => 'assigned_user_name',
+            'label' => 'LBL_ASSIGNED_TO_NAME',
           ),
         ),
-        4 => 
+        3 => 
         array (
           0 => 
           array (
