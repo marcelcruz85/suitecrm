@@ -1,0 +1,640 @@
+
+/* Color Schema */
+
+body {
+    background: #edecec;
+}
+
+.navbar-inverse,
+#globalLinks,
+.navbar-inverse .user-menu-button:hover,
+.navbar-inverse #desktop_notifications button:hover,
+.navbar-inverse .user-menu-button,
+.navbar-inverse #desktop_notifications button,
+#subpanel_list li .collapsed,
+.panel-email-compose>div,
+.navbar-inverse li.navbar-search .input-group button:hover,
+.navbar-inverse #searchbutton:hover,
+#searchbutton{
+    background: #534d64 !important;
+}
+
+.navbar-inverse li:hover,
+.navbar-inverse a:hover {
+    border-color: #534d64 !important;
+}
+
+.navbar-inverse .dropdown-menu li:hover,
+.navbar-inverse .dropdown-menu a:hover {
+    background: #f9f1f3 !important;
+    border-color: #f9f1f3 !important
+}
+
+
+.panel-body table thead .pagination td .sugar_action_button,
+.panel-body table thead .pagination td button,
+table thead #pagination td ul .sugar_action_button {
+    background: #f08377 !important;    
+}
+
+.nav-tabs li.active,
+.nav-tabs li:hover {
+    border-bottom: 3px solid #534d64 !important
+}
+
+.detail-view-field.inlineEditActive {
+    border: 1px solid #534d64;
+}
+
+
+.dateTimeComboColumn button:hover,
+.email-address-add-button:hover,
+.edit-view-field .id-ff.multiple button:hover,
+.dateTimeComboColumn button,
+.email-address-add-button,
+.edit-view-field .id-ff.multiple button {
+    background: #378cbe !important;
+}
+
+.email-address-remove-button,
+.edit-view-field .id-ff.multiple button.lastChild,
+.email-address-remove-button:hover,
+.edit-view-field .id-ff.multiple button.lastChild:hover {
+    background: #f14343 !important;
+}
+
+.nav-tabs li.active a,
+.buttontoggle{
+    color: #534d64 !important;
+}
+
+/* End Color Schema */
+
+body *{
+    font-family: roboto;
+}
+
+.navbar-inverse {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.navbar-inverse a {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.navbar-inverse li:hover,
+.navbar-inverse a:hover {
+    background: none !important;
+    color: #f0f0f0 !important;
+}
+.navbar-inverse #quickcreatetop>a {
+    margin-top: 13px;
+    margin-bottom: 11px;
+    background: none;
+    font-size: 13px;
+    font-family: roboto;
+    letter-spacing: 0.5px;
+    font-weight: 600
+}
+
+.navbar-inverse .dropdown-menu{
+    border-radius: 0px;
+    width: 250px;
+    overflow: visible;
+    padding: 0px;
+    border: none;
+    background: none;
+}
+
+.navbar-inverse .dropdown-menu>li {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    background:#fff !important;
+}
+
+
+.navbar-inverse .recent-links-title strong {
+    color: #c3c3c3
+}
+
+.navbar-inverse .dropdown-menu li a {
+    color: #000 !important;
+    background: #fff;
+    font-family: roboto;
+    font-weight: 400;
+    font-size: 13px;
+    border-color: #fff;
+    padding: 12px
+}
+
+.navbar-inverse li.navbar-search {
+    top: -3px !important
+}
+
+.navbar-inverse li.navbar-search .input-group * {
+    border: none !important;
+    border-radius: 0px !important
+}
+.navbar-inverse li.navbar-search .input-group button:hover {
+    background: none;
+}
+
+
+.navbar-inverse .user-menu-button,
+.navbar-inverse #desktop_notifications button{
+    text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    font-size: 37px;
+    line-height: 1px !important;
+}
+
+
+#globalLinks,
+.navbar-inverse .user-menu-button:hover,
+.navbar-inverse #desktop_notifications button:hover {
+    text-shadow: none;
+}
+
+.navbar-inverse .user-menu-button span {
+    display: none
+}
+
+.navbar-inverse .user-menu-button span:first-child {
+    display: block;
+}
+
+.user-dropdown{
+    margin-top: 4px !important;
+}
+
+.sidebar{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background: #fff;
+    padding-top: 20px
+}
+.sidebar h2,
+.sidebar a{
+    color: #000 !important;
+    opacity: 0.8;
+    font-weight: 700;
+    font-size: 16px
+}
+.actionMenuSidebar{
+    display: none;
+}
+
+
+.listViewBody {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+table #selectLinkTop li label {
+    margin-top: -5px !important;
+    padding: 0px 5px !important
+}
+
+table div.selectedRecords.label {
+    padding: 4px 0px !important
+}
+
+table .selectActionsDisabled {
+    display: none !important
+}
+
+table thead tr {
+    background-color: #fff !important
+}
+
+table thead th * {
+    color: #000 !important
+}
+
+table thead #pagination td {
+    background: #fff !important;
+    color: #000 !important;
+    border-bottom: 1px solid #c3c3c3
+}
+
+table thead #pagination td .list-view-pagination-button,
+table thead #pagination td .pageNumbers,
+table thead #pagination td #listViewNextButton_top {
+    display: none
+}
+
+.suitepicon{
+    line-height: auto !important;
+}
+
+table thead #pagination td ul .sugar_action_button {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 0px !important;
+    padding: 3px !important;
+    height: 30px
+}
+table thead #pagination td ul .sugar_action_button:hover {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+table tbody tr {
+    height: 45px
+}
+
+table tfoot tbody tr {
+    border-top: 1px solid #c3c3c3
+}
+
+table tfoot tbody tr td {
+    background: #fff !important;
+    width: 100%
+}
+
+table tfoot tbody tr td:first-child {
+    display: none
+}
+
+table tfoot table tbody tr td button{
+    color: #000 !important;
+    line-height: 0px !important;
+    background: none !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+table tfoot table tbody tr td button span{
+    color: #000 !important;
+    padding: 5px !important;
+    margin: 0px !important;
+}
+
+
+table tfoot table tbody tr td .pageNumbers {
+    color: #000 !important
+}
+
+.subnav {
+    padding: 0px !important;
+    border-radius: 0px !important;
+    box-shadow: 2px 4px 3px #cecece;
+    top: 30px !important;
+    border: none !important;
+    background: #fff !important
+}
+
+.subnav li {
+    background: #fff !important;
+    border-top: 1px solid #f3f3f3
+}
+
+.subnav li a:hover,
+.subnav li:hover {
+    background: #E3F2FD !important
+}
+
+.subnav li a {
+    color: #000 !important;
+    background: none !important;
+    font-family: roboto;
+    font-weight: 400;
+    font-size: 13px;
+    padding: 7px 10px 5px !important;
+    border: none !important
+}
+
+.tab-content {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.detail-view {
+    margin-top: -32px !important
+}
+
+#EditView_tabs {
+    margin-top: -32px !important
+}
+
+.moduleTitle h2 {
+    font-family: roboto;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin-top: -5px
+}
+
+table tr td.buttons {
+    width: 100%
+}
+
+.nav-tabs {
+    margin-left: 20px
+}
+
+.nav-tabs .tab-inline-pagination,
+.edit-view-pagination-desktop-container {
+    display: none !important
+}
+
+.nav-tabs li {
+    border-bottom: 1px solid;
+    margin-left: 3px;
+    min-width: 100px;
+    text-align: center
+}
+
+.nav-tabs li.active {
+    margin-top: -2px
+}
+
+.nav-tabs li a {
+    background: none !important;
+    color: #000 !important;
+    font-family: roboto !important;
+    letter-spacing: 1px !important;
+    border: none;
+    font-weight: 600 !important;
+    opacity: 0.5
+}
+
+.nav-tabs li.active a {
+    opacity: 0.9 !important;
+}
+
+textarea:focus,
+input:focus {
+    outline: none
+}
+
+.detail-view-row-item {
+    margin-top: 3px
+}
+
+.detail-view-field.inlineEditActive {
+    background: #fff;
+    border-radius: 0px
+}
+
+.detail-view-field input {
+    border: none !important
+}
+
+.dcQuickEdit .buttons {
+    float: right;
+    width: auto
+}
+
+#subpanel_list>li {
+    box-shadow: 2px 2px 3px;
+    margin-bottom: 10px
+}
+
+#subpanel_list li .collapsed {
+    color: #fff
+}
+
+.panel-body table thead .pagination td {
+    background: #fff !important;
+    border-bottom: 1px solid #cecece !important
+}
+
+.panel-body table thead .pagination td .sugar_action_button {
+    margin-left: 10px !important;
+    border-radius: 0px !important;
+    box-shadow: 1px 1px 3px #cecece;
+    height: 35px !important;
+    padding: 3px !important
+}
+
+.panel-body table thead .pagination td .sugar_action_button a {
+    background: none !important;
+    font-family: roboto !important
+}
+
+.panel-body table thead .pagination td button {
+    font-family: roboto !important;
+    color: #fff
+}
+
+.panel-body table thead .pagination td .pageNumbers {
+    color: #000 !important;
+    padding: 3px;
+    margin: 3px
+}
+
+table>tbody>tr>td.buttons>div {
+    margin: 10px 10px 0px
+}
+
+.quickcreate form>div.buttons {
+    display: none
+}
+
+.quickcreate .panel-heading {
+    display: none
+}
+
+.edit-view-row-item {
+    margin-bottom: 25px !important
+}
+
+.edit-view-field.yui-ac {
+    margin-top: -5px
+}
+
+input[type=text],
+select {
+    border-radius: 0px !important;
+    margin: 0px !important;
+    height: 35px !important;
+    border: 1px solid #c4e3f5 !important
+}
+
+.dateTimeComboColumn button,
+.email-address-add-button,
+.edit-view-field .id-ff.multiple button {
+    height: 35px !important;
+    width: 35px !important;
+    border-radius: 0px !important;
+    box-shadow: 2px 2px 5px #c3c3c3;
+}
+
+.dateTimeComboColumn button:hover,
+.email-address-add-button:hover,
+.edit-view-field .id-ff.multiple button:hover {
+    box-shadow: 0px 0px 2px #c3c3c3;
+    opacity: 0.95 !important
+}
+
+.email-address-remove-button,
+.edit-view-field .id-ff.multiple button.lastChild {
+    height: 35px;
+    width: 35px !important;
+    border: none !important;
+    border-radius: 0px !important;
+    box-shadow: 2px 2px 5px #c3c3c3
+}
+
+.email-address-remove-button:hover,
+.edit-view-field .id-ff.multiple button.lastChild:hover {
+    box-shadow: 0px 0px 2px #c3c3c3;
+    opacity: 0.95 !important
+}
+
+.suitepicon-action-plus,
+.suitepicon-module-calendar,
+.suitepicon-action-minus {
+    margin: -10px !important
+}
+
+.modal-content {
+    border-radius: 0px !important
+}
+
+.modal-body {
+    padding: 0px;
+    border: none !important
+}
+
+.modal-body .panel-heading {
+    background: none !important;
+    padding: 20px 10px !important
+}
+
+.modal-body .panel-heading a {
+    color: #000 !important;
+    font-size: 18px;
+    font-family: roboto;
+    text-transform: capitalize
+}
+
+.modal-body .panel-body .tab-content {
+    box-shadow: none !important;
+    padding: 20px 20px 0px !important
+}
+
+
+.yui-simple-dialog .cal_panel {
+    border-radius: 0px !important;
+    border: none !important;
+    box-shadow: 1px 3px 15px #cecece;
+    padding: 0px !important
+}
+
+.yui-simple-dialog div.hd {
+    border-radius: 0px !important;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: roboto;
+    padding: 10px;
+    border: none !important
+}
+
+#callnav_today {
+    line-height: 15px !important
+}
+
+.yui-simple-dialog thead>tr:nth-child(1)>th>div a {
+    padding: 0px !important;
+    line-height: 15px
+}
+
+.yui-simple-dialog .yui-calcontainer {
+    padding: 0px;
+    border: none
+}
+
+.yui-simple-dialog thead>tr:nth-child(1)>th {
+    background: none !important;
+    margin: 0px !important
+}
+
+.yui-simple-dialog thead>tr.calweekdayrow>th {
+    color: #000;
+    opacity: 0.7
+}
+
+.yui-simple-dialog thead>tr>th>div>a.calnav {
+    background: none
+}
+
+.yui-simple-dialog thead>tr>th>div>a.calnav:hover {
+    background: none !important
+}
+
+.yui-simple-dialog thead>tr>th>div>a.calnavleft,
+.yui-simple-dialog thead>tr>th>div>a.calnavright {
+    border-radius: 0px;
+    box-shadow: 1px 1px 3px #cecece
+}
+
+.yui-calendar td.calcell {
+    border: none
+}
+
+.yui-cal-nav {
+    border: none !important;
+    box-shadow: 1px 1px 10px #cecece
+}
+
+.yui-cal-nav div select,
+.yui-cal-nav div input {
+    width: 100% !important;
+    border-radius: 0px !important
+}
+
+.yui-cal-nav .yui-cal-nav-b span {
+    background: none !important;
+    border: none !important
+}
+
+.yui-cal-nav .yui-cal-nav-b span button {
+    background: none !important;
+    border: none !important;
+    color: #000 !important;
+    text-shadow: none !important;
+    font-family: roboto !important;
+    font-size: 13px !important
+}
+
+.buttontoggle{
+    background: none;
+    font-size: 22px;
+}
+.sidebar{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background: #fff;
+    padding-top: 20px
+}
+.sidebar h2,
+.sidebar a{
+    color: #000 !important;
+    opacity: 0.8;
+    font-weight: 700;
+    font-size: 16px
+}
+.actionMenuSidebar{
+    display: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px !important;
+    background: #edecec
+}
+
+@media(min-width:768px) {
+    .desktop-bar {
+        padding: 0px !important
+    }
+    .navbar-inverse #desktop_notification {
+        top: 1px !important
+    }
+    .navbar-inverse .user-menu-button {
+        margin: 0px 10px -2px !important
+    }
+}
+
+@media(max-width:1366px) {
+    .modal-lg{
+        width: 100% !important;
+    }
+}

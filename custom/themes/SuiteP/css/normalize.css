@@ -1,0 +1,105 @@
+
+body {
+    background: #edecec;
+    font-family: roboto;
+}
+
+body #content {
+    background: #edecec Marcel;
+}
+
+
+
+.navbar-inverse {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background: #2196f3
+}
+
+.navbar-inverse a {
+    font-size: 14px;
+    font-family: roboto;
+    letter-spacing: 0.5px;
+    font-weight: 500
+}
+
+.navbar-inverse li:hover,
+.navbar-inverse a:hover {
+    background: #1d84d5 !important;
+    border-color: #1d84d5 !important
+}
+
+.navbar-inverse #quickcreatetop>a {
+    margin-top: 13px;
+    margin-bottom: 11px;
+    background: none;
+    font-size: 14px;
+    font-family: roboto;
+    letter-spacing: 0.5px;
+    font-weight: 500
+}
+
+.navbar-inverse .dropdown-menu{
+    border-radius: 0px;
+    width: 250px;
+    overflow: visible;
+    padding: 0px;
+    border: none;
+}
+
+.navbar-inverse .dropdown-menu>li {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    background:#fff;
+}
+
+
+.navbar-inverse .recent-links-title {
+    border-bottom: 1px solid #c3c3c3;
+    border-top: 1px solid #c3c3c3
+}
+
+.navbar-inverse .recent-links-title strong {
+    color: #c3c3c3
+}
+
+.navbar-inverse .dropdown-menu li a {
+    color: #000 !important;
+    background: #fff;
+    font-family: roboto;
+    font-weight: 400;
+    font-size: 13px;
+    border-color: #f3f3f3;
+    padding: 12px
+}
+
+.navbar-inverse .dropdown-menu li:hover,
+.navbar-inverse .dropdown-menu a:hover {
+    background: #E3F2FD !important;
+    border-color: #E3F2FD !important
+}
+
+.navbar-inverse li.navbar-search {
+    top: -3px !important
+}
+
+.navbar-inverse li.navbar-search .input-group * {
+    border: none !important;
+    border-radius: 0px !important
+}
+
+.navbar-inverse li.navbar-search .input-group button:hover {
+    background: none;
+    color: #1d84d5 
+}
+
+.navbar-inverse #searchbutton:hover {
+    background: #1d84d5
+}
+
+.navbar-inverse .user-menu-button,
+.navbar-inverse #desktop_notifications button{
+    background: #2196f3 !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    font-size: 37px;
+    line-height: 1px !important;
+}
+

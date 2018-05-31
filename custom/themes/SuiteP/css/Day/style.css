@@ -1,40 +1,103 @@
-
+/* Color Schema */
 
 body {
     background: #edecec;
-    font-family: roboto;
 }
 
-body #content {
-    background: #edecec
-}
-
-.navbar-inverse {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    background: #2196f3
-}
-
-.navbar-inverse a {
-    font-size: 14px;
-    font-family: roboto;
-    letter-spacing: 0.5px;
-    font-weight: 500
+.navbar-inverse,
+#globalLinks,
+.navbar-inverse .user-menu-button:hover,
+.navbar-inverse #desktop_notifications button:hover,
+.navbar-inverse .user-menu-button,
+.navbar-inverse #desktop_notifications button,
+#subpanel_list li .collapsed,
+.panel-body table thead .pagination td .sugar_action_button,
+.panel-email-compose>div,
+.panel-body table thead .pagination td button,
+.navbar-inverse #searchbutton:hover,
+#searchbutton{
+    background: #2196f3 !important;
 }
 
 .navbar-inverse li:hover,
 .navbar-inverse a:hover {
-    background: #1d84d5 !important;
-    border-color: #1d84d5 !important
+    border-color: #2196f3 !important;
 }
 
+.navbar-inverse .dropdown-menu li:hover,
+.navbar-inverse .dropdown-menu a:hover {
+    background: #E3F2FD !important;
+    border-color: #E3F2FD !important
+}
+.navbar-inverse li.navbar-search .input-group button:hover {
+    color: #1d84d5;
+}
+
+
+table thead #pagination td ul .sugar_action_button {
+    background: #0eb6ca !important;    
+}
+
+.nav-tabs li.active,
+.nav-tabs li:hover {
+    border-bottom: 3px solid #2196f3 !important
+}
+
+.detail-view-field.inlineEditActive {
+    border: 1px solid #2196f3;
+}
+
+
+.dateTimeComboColumn button:hover,
+.email-address-add-button:hover,
+.edit-view-field .id-ff.multiple button:hover,
+.dateTimeComboColumn button,
+.email-address-add-button,
+.edit-view-field .id-ff.multiple button {
+    background: #378cbe !important;
+}
+
+.email-address-remove-button,
+.edit-view-field .id-ff.multiple button.lastChild,
+.email-address-remove-button:hover,
+.edit-view-field .id-ff.multiple button.lastChild:hover {
+    background: #f14343 !important;
+}
+
+.nav-tabs li.active a,
+.buttontoggle{
+    color: #2196f3 !important;
+}
+
+/* End Color Schema */
+
+body *{
+    font-family: roboto;
+}
+
+.navbar-inverse {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.navbar-inverse a {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.navbar-inverse li:hover,
+.navbar-inverse a:hover {
+    background: none !important;
+    color: #f0f0f0 !important;
+}
 .navbar-inverse #quickcreatetop>a {
     margin-top: 13px;
     margin-bottom: 11px;
     background: none;
-    font-size: 14px;
+    font-size: 13px;
     font-family: roboto;
     letter-spacing: 0.5px;
-    font-weight: 500
+    font-weight: 600
 }
 
 .navbar-inverse .dropdown-menu{
@@ -43,6 +106,7 @@ body #content {
     overflow: visible;
     padding: 0px;
     border: none;
+    background: none;
 }
 
 .navbar-inverse .dropdown-menu>li {
@@ -50,11 +114,6 @@ body #content {
     background:#fff;
 }
 
-
-.navbar-inverse .recent-links-title {
-    border-bottom: 1px solid #c3c3c3;
-    border-top: 1px solid #c3c3c3
-}
 
 .navbar-inverse .recent-links-title strong {
     color: #c3c3c3
@@ -66,14 +125,8 @@ body #content {
     font-family: roboto;
     font-weight: 400;
     font-size: 13px;
-    border-color: #f3f3f3;
+    border-color: #fff;
     padding: 12px
-}
-
-.navbar-inverse .dropdown-menu li:hover,
-.navbar-inverse .dropdown-menu a:hover {
-    background: #E3F2FD !important;
-    border-color: #E3F2FD !important
 }
 
 .navbar-inverse li.navbar-search {
@@ -84,28 +137,22 @@ body #content {
     border: none !important;
     border-radius: 0px !important
 }
-
 .navbar-inverse li.navbar-search .input-group button:hover {
     background: none;
-    color: #1d84d5 
 }
 
-.navbar-inverse #searchbutton:hover {
-    background: #1d84d5
-}
 
 .navbar-inverse .user-menu-button,
 .navbar-inverse #desktop_notifications button{
-    background: #2196f3 !important;
     text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     font-size: 37px;
     line-height: 1px !important;
 }
 
+
 #globalLinks,
 .navbar-inverse .user-menu-button:hover,
 .navbar-inverse #desktop_notifications button:hover {
-    background: #2196f3 !important;
     text-shadow: none;
 }
 
@@ -118,7 +165,7 @@ body #content {
 }
 
 .user-dropdown{
-    margin-top: 10px !important;
+    margin-top: 4px !important;
 }
 
 .sidebar{
@@ -180,7 +227,6 @@ table thead #pagination td #listViewNextButton_top {
 }
 
 table thead #pagination td ul .sugar_action_button {
-    background: #0eb6ca !important;    
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     border-radius: 0px !important;
     padding: 3px !important;
@@ -294,12 +340,7 @@ table tr td.buttons {
     text-align: center
 }
 
-.nav-tabs li:hover {
-    border-bottom: 3px solid #2196f3 !important
-}
-
 .nav-tabs li.active {
-    border-bottom: 3px solid #2196f3 !important;
     margin-top: -2px
 }
 
@@ -314,8 +355,7 @@ table tr td.buttons {
 }
 
 .nav-tabs li.active a {
-    color: #2196f3 !important;
-    opacity: 9.9 !important
+    opacity: 0.9 !important;
 }
 
 textarea:focus,
@@ -329,7 +369,6 @@ input:focus {
 
 .detail-view-field.inlineEditActive {
     background: #fff;
-    border: 1px solid #2196f3;
     border-radius: 0px
 }
 
@@ -348,7 +387,6 @@ input:focus {
 }
 
 #subpanel_list li .collapsed {
-    background: #2196f3 !important;
     color: #fff
 }
 
@@ -358,7 +396,6 @@ input:focus {
 }
 
 .panel-body table thead .pagination td .sugar_action_button {
-    background: #2196f3 !important;
     margin-left: 10px !important;
     border-radius: 0px !important;
     box-shadow: 1px 1px 3px #cecece;
@@ -372,7 +409,6 @@ input:focus {
 }
 
 .panel-body table thead .pagination td button {
-    background: #2196f3 !important;
     font-family: roboto !important;
     color: #fff
 }
@@ -418,20 +454,17 @@ select {
     width: 35px !important;
     border-radius: 0px !important;
     box-shadow: 2px 2px 5px #c3c3c3;
-    background: #378cbe
 }
 
 .dateTimeComboColumn button:hover,
 .email-address-add-button:hover,
 .edit-view-field .id-ff.multiple button:hover {
     box-shadow: 0px 0px 2px #c3c3c3;
-    background: #378cbe !important;
     opacity: 0.95 !important
 }
 
 .email-address-remove-button,
 .edit-view-field .id-ff.multiple button.lastChild {
-    background: #f14343;
     height: 35px;
     width: 35px !important;
     border: none !important;
@@ -441,7 +474,6 @@ select {
 
 .email-address-remove-button:hover,
 .edit-view-field .id-ff.multiple button.lastChild:hover {
-    background: #f14343 !important;
     box-shadow: 0px 0px 2px #c3c3c3;
     opacity: 0.95 !important
 }
@@ -478,9 +510,6 @@ select {
     padding: 20px 20px 0px !important
 }
 
-.panel-email-compose>div {
-    background: #2196f3
-}
 
 .yui-simple-dialog .cal_panel {
     border-radius: 0px !important;
@@ -569,9 +598,7 @@ select {
 
 .buttontoggle{
     background: none;
-    color: #2196f3 !important;
     font-size: 22px;
-
 }
 .sidebar{
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);

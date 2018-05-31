@@ -805,3 +805,90 @@ Tue May 22 21:36:08 2018 [2739][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] Sug
 Tue May 22 21:36:19 2018 [3312][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
 Tue May 22 22:00:10 2018 [3269][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
 Tue May 22 22:14:15 2018 [7400][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Fri May 25 14:12:25 2018 [9145][1][FATAL] Job runs too frequently, throttled to protect the system.
+Fri May 25 14:12:26 2018 [9152][1][FATAL] Job runs too frequently, throttled to protect the system.
+Fri May 25 14:12:26 2018 [9160][1][FATAL] Job runs too frequently, throttled to protect the system.
+Sat May 26 08:49:01 2018 [12197][1][FATAL] Job runs too frequently, throttled to protect the system.
+Sat May 26 16:04:01 2018 [5948][1][FATAL] Job runs too frequently, throttled to protect the system.
+Sat May 26 17:55:00 2018 [12004][1][FATAL] Job runs too frequently, throttled to protect the system.
+Sat May 26 17:55:01 2018 [12009][1][FATAL] Job runs too frequently, throttled to protect the system.
+Sat May 26 17:55:01 2018 [12017][1][FATAL] Job runs too frequently, throttled to protect the system.
+Sun May 27 11:25:01 2018 [27268][1][FATAL] Job runs too frequently, throttled to protect the system.
+Mon May 28 10:21:01 2018 [8717][1][FATAL] Job runs too frequently, throttled to protect the system.
+Mon May 28 14:02:02 2018 [15000][1][FATAL] Job runs too frequently, throttled to protect the system.
+Mon May 28 14:40:20 2018 [17745][1][FATAL] Job runs too frequently, throttled to protect the system.
+Mon May 28 14:40:20 2018 [17750][1][FATAL] Job runs too frequently, throttled to protect the system.
+Mon May 28 14:40:20 2018 [17760][1][FATAL] Job runs too frequently, throttled to protect the system.
+Mon May 28 14:40:20 2018 [17765][1][FATAL] Job runs too frequently, throttled to protect the system.
+Mon May 28 21:29:05 2018 [4319][1][FATAL] Job runs too frequently, throttled to protect the system.
+Mon May 28 21:29:05 2018 [4325][1][FATAL] Job runs too frequently, throttled to protect the system.
+Mon May 28 21:29:05 2018 [4333][1][FATAL] Job runs too frequently, throttled to protect the system.
+Tue May 29 14:00:01 2018 [12246][1][FATAL] Job runs too frequently, throttled to protect the system.
+Tue May 29 17:00:45 2018 [16423][1][FATAL] Job runs too frequently, throttled to protect the system.
+Tue May 29 17:00:45 2018 [16429][1][FATAL] Job runs too frequently, throttled to protect the system.
+Tue May 29 17:00:45 2018 [16436][1][FATAL] Job runs too frequently, throttled to protect the system.
+Tue May 29 17:01:01 2018 [16465][1][FATAL] Job runs too frequently, throttled to protect the system.
+Tue May 29 21:49:06 2018 [22093][1][FATAL] Job runs too frequently, throttled to protect the system.
+Wed May 30 11:11:01 2018 [28307][1][FATAL] Job runs too frequently, throttled to protect the system.
+Wed May 30 11:13:25 2018 [19295][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 11:28:43 2018 [19296][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 11:29:25 2018 [28410][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarPHPMailer encountered an error: Invalid address:  (addAnAddress to): 
+Wed May 30 11:29:25 2018 [28410][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarPHPMailer encountered an error: You must provide at least one recipient email address.
+Wed May 30 11:29:25 2018 [28410][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarPHPMailer encountered an error: You must provide at least one recipient email address.
+Wed May 30 11:32:07 2018 [19240][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 11:32:17 2018 [19240][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 11:32:29 2018 [19295][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 11:32:44 2018 [18973][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 11:34:04 2018 [19295][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 11:35:00 2018 [18971][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 11:35:02 2018 [18971][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 11:36:15 2018 [18974][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 11:41:11 2018 [18970][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 17:18:01 2018 [30986][1][FATAL] Job runs too frequently, throttled to protect the system.
+Wed May 30 17:18:02 2018 [28409][-none-][FATAL] SECURITY: User authentication for admin failed
+Wed May 30 17:18:02 2018 [28409][-none-][FATAL] FAILED LOGIN:attempts[1], ip[::1], username[admin]
+Wed May 30 17:18:09 2018 [28409][1][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 17:24:18 2018 [28424][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 17:38:38 2018 [32698][1][FATAL] ERROR: rmdir_recursive(): argument cache/themes/SuiteP/modules is not a file or a dir.
+Wed May 30 17:39:09 2018 [19295][1][FATAL] ERROR: rmdir_recursive(): argument cache/themes/SuiteP/modules is not a file or a dir.
+Wed May 30 17:41:28 2018 [19296][1][FATAL] ERROR: rmdir_recursive(): argument cache/themes/SuiteP/modules is not a file or a dir.
+Wed May 30 17:41:58 2018 [661][1][FATAL] ERROR: rmdir_recursive(): argument cache/themes/SuiteP/modules is not a file or a dir.
+Wed May 30 17:42:02 2018 [28424][1][FATAL] ERROR: rmdir_recursive(): argument cache/themes/SuiteP/modules is not a file or a dir.
+Wed May 30 17:42:20 2018 [19296][1][FATAL] ERROR: rmdir_recursive(): argument cache/themes/SuiteP/modules is not a file or a dir.
+Wed May 30 20:48:00 2018 [19296][1][FATAL] ERROR: rmdir_recursive(): argument cache/themes/SuiteP/modules is not a file or a dir.
+Wed May 30 20:48:04 2018 [28409][1][FATAL] ERROR: rmdir_recursive(): argument cache/themes/SuiteP/modules is not a file or a dir.
+Wed May 30 20:48:40 2018 [415][1][FATAL] ERROR: rmdir_recursive(): argument cache/themes/SuiteP/modules is not a file or a dir.
+Wed May 30 20:49:09 2018 [28424][1][FATAL] ERROR: rmdir_recursive(): argument cache/themes/SuiteP/modules is not a file or a dir.
+Wed May 30 20:49:14 2018 [28409][1][FATAL] ERROR: rmdir_recursive(): argument cache/themes/SuiteP/modules is not a file or a dir.
+Wed May 30 20:52:01 2018 [4238][1][FATAL] ERROR: rmdir_recursive(): argument cache/themes/SuiteP/modules is not a file or a dir.
+Wed May 30 20:52:10 2018 [4238][1][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 20:57:41 2018 [4737][1][FATAL] ERROR: rmdir_recursive(): argument cache/themes/SuiteP/modules is not a file or a dir.
+Wed May 30 20:59:35 2018 [5329][1][FATAL] ERROR: rmdir_recursive(): argument cache/themes/SuiteP/modules is not a file or a dir.
+Wed May 30 20:59:39 2018 [4759][1][FATAL] ERROR: rmdir_recursive(): argument cache/themes/SuiteP/modules is not a file or a dir.
+Wed May 30 21:00:04 2018 [4759][-none-][FATAL] SECURITY: User authentication for marcelcruz85 failed
+Wed May 30 21:00:04 2018 [4759][-none-][FATAL] FAILED LOGIN:attempts[1], ip[::1], username[marcelcruz85]
+Wed May 30 21:26:06 2018 [9888][1][FATAL] ERROR: rmdir_recursive(): argument cache/themes/SuiteP/modules is not a file or a dir.
+Wed May 30 22:05:39 2018 [12626][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 22:25:47 2018 [19389][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 22:27:29 2018 [19406][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 22:28:29 2018 [11958][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] Exception handling in /home/marcel/public_html/suitecrm/include/MVC/Controller/SugarController.php:402
+Wed May 30 22:28:29 2018 [11958][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] Exception in Controller: Unauthorized access to administration.
+Wed May 30 22:28:29 2018 [11958][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] backtrace:
+#0 /home/marcel/public_html/suitecrm/modules/Administration/repairDatabase.php(180): sugar_die('Unauthorized ac...')
+#1 /home/marcel/public_html/suitecrm/modules/Administration/QuickRepairAndRebuild.php(134): include_once('/home/marcel/pu...')
+#2 /home/marcel/public_html/suitecrm/modules/Administration/QuickRepairAndRebuild.php(118): RepairAndClear->repairDatabase()
+#3 /home/marcel/public_html/suitecrm/modules/Administration/views/view.repair.php(58): RepairAndClear->repairAndClearAll(Array, Array, false, true)
+#4 /home/marcel/public_html/suitecrm/include/MVC/View/SugarView.php(207): ViewRepair->display()
+#5 /home/marcel/public_html/suitecrm/include/MVC/Controller/SugarController.php(432): SugarView->process()
+#6 /home/marcel/public_html/suitecrm/include/MVC/Controller/SugarController.php(375): SugarController->processView()
+#7 /home/marcel/public_html/suitecrm/include/MVC/SugarApplication.php(109): SugarController->execute()
+#8 /home/marcel/public_html/suitecrm/index.php(52): SugarApplication->execute()
+#9 {main}
+Wed May 30 22:28:31 2018 [12700][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 22:29:55 2018 [19389][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 22:31:21 2018 [11958][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 22:31:33 2018 [21633][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 22:33:25 2018 [21917][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 22:33:57 2018 [19148][b24beb16-7ae8-bb78-3663-5affe4e0f589][FATAL] SugarBean::populateDefaultValues $field_defs should be an array
+Wed May 30 22:34:36 2018 [22325][-none-][FATAL] SECURITY: User authentication for marcelcruz85 failed
+Wed May 30 22:34:36 2018 [22325][-none-][FATAL] FAILED LOGIN:attempts[1], ip[::1], username[marcelcruz85]

@@ -16,4 +16,5 @@ $sugar_config['stack_trace_errors'] = false;
 $sugar_config['hide_history_contacts_emails']['Cases'] = false;
 $sugar_config['hide_history_contacts_emails']['Accounts'] = false;
 $sugar_config['hide_history_contacts_emails']['Opportunities'] = false;
+$sugar_config['developerMode'] = true;
 /***CONFIGURATOR***/
