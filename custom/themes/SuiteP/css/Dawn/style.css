@@ -1,3 +1,39 @@
+.p_login_top,
+.p_login_top a{
+    background: none !important;
+}
+
+#username_password,
+#user_name{
+    height: 43px !important;
+    color: #3e3e3e !important;
+}
+
+#bigbutton{
+    background: #eb6657;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+#searchform .form-control{
+    margin-top: 0px! impostant;
+    bottom: 3px !important;
+}
+.desktop-bar #toolbar li{
+    margin: 0px !important;   
+}
+
+#searchform button{
+    background: #534d64;
+}
+
+#searchform .input-group-btn{
+    background: #534d64 !important;
+}
+
+#searchform input{
+    border: none !important;
+    background: #fff;
+}
 
 /* Color Schema */
 
