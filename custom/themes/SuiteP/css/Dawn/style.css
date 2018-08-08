@@ -120,7 +120,7 @@ body *{
 .navbar-inverse li:hover,
 .navbar-inverse a:hover {
     background: none !important;
-    color: #f0f0f0 !important;
+    color: #eb6657 !important;
 }
 .navbar-inverse #quickcreatetop>a {
     margin-top: 13px;
